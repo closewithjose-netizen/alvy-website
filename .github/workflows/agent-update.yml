@@ -1,0 +1,35 @@
+name: Alvy site agent
+
+# Runs the auto-update agent every Monday at 9am ET, on any push to
+# business-context.md, and manually via the "Run workflow" button.
+on:
+  schedule:
+    - cron: '0 13 * * 1' # Mon 09:00 ET (13:00 UTC)
+  push:
+    paths:
+      - 'business-context.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Run the update agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: claude-sonnet-4-6
+          GH_AGENT_TOKEN: ${{ secrets.GH_AGENT_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/agent-update.mjs

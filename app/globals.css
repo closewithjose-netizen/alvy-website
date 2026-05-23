@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection { @apply bg-brand text-white; }
+}
+
+@layer components {
+  .container-page { @apply max-w-6xl mx-auto px-6 sm:px-8; }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand text-white
+      font-medium px-6 py-3 shadow-lg shadow-brand/20 hover:bg-brand-dark
+      transition-colors;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-ink/15
+      text-ink font-medium px-6 py-3 hover:bg-ink/5 transition-colors;
+  }
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-soft text-brand-dark
+      px-3 py-1 text-xs font-medium uppercase tracking-wider;
+  }
+}
+
+/* Rotating headline shimmer underline */
+.shimmer-underline {
+  background-image: linear-gradient(
+    90deg,
+    rgba(232, 84, 43, 0) 0%,
+    rgba(232, 84, 43, 1) 30%,
+    rgba(232, 84, 43, 1) 70%,
+    rgba(232, 84, 43, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+}
