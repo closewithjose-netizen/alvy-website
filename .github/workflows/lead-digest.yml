@@ -2,7 +2,7 @@ name: Daily lead digest
 
 on:
   schedule:
-    - cron: '0 13 * * *' # every day at 09:00 ET
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - name: Run the digest
         env:
           GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
