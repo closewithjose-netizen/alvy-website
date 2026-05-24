@@ -1,23 +1,90 @@
+const badges = [
+  'BBB A+ Accredited',
+  'EPA Lead-Safe Certified',
+  'Licensed in Virginia',
+  'Insured & Bonded',
+  'BuildZoom Top 22%'
+];
+
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-ink/10">
-      <div className="container-page flex flex-col sm:flex-row gap-6 justify-between items-start">
-        <div>
-          <div className="font-display text-2xl font-semibold">
-            Alvy Color Changes
+    <footer id="contact" className="bg-ink text-cream py-16">
+      <div className="container-page">
+        <div className="grid sm:grid-cols-3 gap-10">
+          <div className="sm:col-span-2">
+            <div className="font-display text-2xl font-semibold">
+              Alvy <span className="text-brand">Color Changes</span>
+            </div>
+            <p className="text-cream/60 mt-2 text-sm">
+              Owner-operated house painters serving the Peninsula.
+            </p>
+            <address className="not-italic mt-6 text-sm text-cream/80 space-y-1">
+              <div>Newport News, Virginia 23606</div>
+              <div>
+                <a href="tel:+17575550000" className="hover:text-brand">
+                  (757) XXX-XXXX
+                </a>
+              </div>
+              <div>
+                <a
+                  href="mailto:jose@alvycolorchanges.com"
+                  className="hover:text-brand"
+                >
+                  jose@alvycolorchanges.com
+                </a>
+              </div>
+            </address>
+            <div className="mt-6 text-xs text-cream/50 leading-relaxed">
+              Hours: Mon–Fri 7am–6pm · Sat 8am–2pm · Sun by appointment
+            </div>
           </div>
-          <p className="text-ink/60 text-sm mt-1">
-            Painting that finally feels right.
-          </p>
+          <div>
+            <div className="text-xs uppercase tracking-wider text-cream/40 mb-3">
+              Jump to
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#chat" className="hover:text-brand">
+                  Start a chat
+                </a>
+              </li>
+              <li>
+                <a href="#offers" className="hover:text-brand">
+                  What we build for
+                </a>
+              </li>
+              <li>
+                <a href="#why" className="hover:text-brand">
+                  Why us
+                </a>
+              </li>
+              <li>
+                <a href="#neighborhoods" className="hover:text-brand">
+                  Neighborhoods
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-brand">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
-          <a href="#services" className="hover:text-brand">Services</a>
-          <a href="#why" className="hover:text-brand">Why us</a>
-          <a href="#faq" className="hover:text-brand">FAQ</a>
-          <a href="#contact" className="hover:text-brand">Contact</a>
+
+        <div className="mt-12 pt-8 border-t border-cream/10 flex flex-wrap gap-x-4 gap-y-2 items-center">
+          {badges.map((b) => (
+            <span
+              key={b}
+              className="text-[11px] uppercase tracking-wider text-cream/60 border border-cream/20 rounded-full px-3 py-1"
+            >
+              {b}
+            </span>
+          ))}
         </div>
-        <div className="text-xs text-ink/50">
-          © {new Date().getFullYear()} Alvy Color Changes. All rights reserved.
+
+        <div className="mt-8 text-xs text-cream/40">
+          © {new Date().getFullYear()} Alvy Color Changes LLC · All rights reserved
         </div>
       </div>
     </footer>

@@ -4,60 +4,98 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: 'How much does it cost to paint a room?',
-    a: "Most interior rooms fall in a reasonable range depending on size, prep, ceiling height, and how many color changes are involved. We give a free estimate after a quick walkthrough — usually within 24 hours of you reaching out."
+    q: "What's a PCS Move-In Refresh?",
+    a: "It's a fixed-price painting package built specifically for military families relocating to Hampton Roads. We work backward from your report date — 7, 10, or 14-day turn options, photo documentation throughout, and an inspection-grade finish. You give us the keys; we hand you back a move-in-ready house."
   },
   {
-    q: 'How long does it take?',
-    a: "A single room is usually 1–2 days. A full interior repaint of a 3-bed house typically runs 4–6 days. Cabinets take 3–5 days with dry time between coats."
+    q: 'How fast can you get me an estimate?',
+    a: "48 hours from the time you reach out — usually faster. Jose is an owner-operator, so when you text Alvy, you're texting him directly. Estimates are always free."
   },
   {
-    q: 'Do you move furniture?',
-    a: "Yes — we move it to the center of the room and cover it. We ask you to take down wall art and valuables ahead of time."
+    q: 'Do you paint pre-1978 homes? What about lead paint?',
+    a: "Yes. We're EPA Lead-Safe (RRP) certified, which is required for any paint-disturbing work on pre-1978 housing. We follow the containment, prep, and documentation rules properly. A lot of painters out here aren't certified — we are."
   },
   {
-    q: 'Will you help me pick colors?',
-    a: "That's literally the name of the company. Book a $150 color consultation and we'll bring physical samples to your space, put them on the wall in the right light, and leave you with a written palette. If you book the job, the $150 comes off the invoice."
+    q: 'Do you paint cabinets without replacing them?',
+    a: "Yes. Most yellowing or peeling cabinets are fine structurally — they just need proper prep and the right paint system. We strip, prime, and spray-finish for a factory-grade result."
   },
   {
-    q: 'What paint do you use?',
-    a: "Mid- to high-grade Benjamin Moore and Sherwin Williams by default. If you want a different brand or finish, we'll match the spec."
+    q: 'What does a pre-listing paint refresh cost?',
+    a: 'Depends on size and scope. We give a real number after a quick walkthrough — usually within 24 hours. No "starts at" hand-waves, and the estimate is always free.'
   },
   {
-    q: 'Do you do exteriors in winter?',
-    a: "Only when temperatures cooperate. Cold-weather exterior painting can fail. We schedule exteriors in the warm season and use the off-season for interiors + cabinets."
+    q: 'Do you work with property managers?',
+    a: 'Yes — turnover painting is one of our core services. We already work with ABBITT Realty. Fixed room-by-room pricing, 24-48 hour estimates, photo documentation, and invoicing formatted for owner approval.'
+  },
+  {
+    q: 'What neighborhoods do you serve?',
+    a: "Newport News, Hampton, and Williamsburg are our primary service areas. We regularly work in Hidenwood, Riverside, Merry Point Estates, Hilton Village, North End, Fox Hill, Farmington, Olde Wythe, Kingsmill, Ford's Colony, and Governor's Land. Other locations by request."
+  },
+  {
+    q: 'Are you licensed and insured?',
+    a: 'Yes — fully licensed in Virginia and insured. BBB A+ accredited. Listed in the top 22% of licensed Virginia contractors per BuildZoom.'
+  },
+  {
+    q: 'Do you offer military discounts?',
+    a: 'Our PCS Move-In Refresh package is priced specifically for military families — we bake the savings into the package pricing instead of stacking discounts. You get a clean fixed number that matches BAH-budget realities.'
+  },
+  {
+    q: '¿Hablan español?',
+    a: 'Sí. Jose y parte del equipo hablan español. Escríbenos en el chat — te respondemos en el idioma que prefieras.'
+  },
+  {
+    q: 'Do you offer free estimates?',
+    a: 'Yes — estimates are always free. No obligation, no hard sell.'
   }
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
 
 export default function FAQ() {
   const [open, setOpen] = useState(0);
   return (
-    <section id="faq" className="py-20 sm:py-28">
+    <section id="faq" className="py-20 sm:py-28 bg-white border-t border-ink/5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-page max-w-3xl">
         <span className="pill">FAQ</span>
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4">
-          The questions we hear all the time.
+        <h2 className="font-display text-3xl sm:text-5xl font-semibold mt-4 leading-tight">
+          Questions Newport News homeowners actually ask.
         </h2>
         <div className="mt-10 divide-y divide-ink/10 border-y border-ink/10">
           {faqs.map((f, i) => (
             <button
-              key={i}
+              key={f.q}
               onClick={() => setOpen(open === i ? -1 : i)}
               className="w-full text-left py-5 flex items-start gap-4 group"
               aria-expanded={open === i}
             >
               <span
-                className={`mt-1 inline-block w-6 h-6 rounded-full border border-ink/20 grid place-items-center text-xs transition-transform ${
-                  open === i ? 'rotate-45 bg-brand text-white border-brand' : ''
+                className={`mt-1 inline-block w-6 h-6 shrink-0 rounded-full border border-ink/20 grid place-items-center text-xs transition-transform ${
+                  open === i
+                    ? 'rotate-45 bg-brand text-white border-brand'
+                    : ''
                 }`}
               >
                 +
               </span>
               <div className="flex-1">
-                <h3 className="font-display text-lg font-semibold">{f.q}</h3>
+                <h3 className="font-display text-base sm:text-lg font-semibold">
+                  {f.q}
+                </h3>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    open === i ? 'max-h-40 mt-2' : 'max-h-0'
+                    open === i ? 'max-h-96 mt-2' : 'max-h-0'
                   }`}
                 >
                   <p className="text-ink/70 text-sm leading-relaxed">{f.a}</p>
@@ -66,6 +104,13 @@ export default function FAQ() {
             </button>
           ))}
         </div>
+        <p className="mt-10 text-center text-sm text-ink/60">
+          Still have a question?{' '}
+          <a href="#chat" className="text-brand underline underline-offset-4 hover:text-brand-dark">
+            Ask Alvy in the chat above
+          </a>{' '}
+          — or grab a free estimate.
+        </p>
       </div>
     </section>
   );
