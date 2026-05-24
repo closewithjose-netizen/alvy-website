@@ -5,33 +5,33 @@ const SITE_URL = 'https://alvy-website.vercel.app';
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    'Newport News Painters | Military Move-In, Pre-Listing, Turnover | Alvy Color Changes',
+    'Newport News Painters | Military Move-In, Pre-Listing, Commercial | Alvy Color Changes',
   description:
-    'Owner-operated house painters in Newport News, Hampton & Williamsburg VA. Military PCS move-in refresh, pre-listing paint, turnover, cabinets, historic lead-safe. BBB A+, 25+ 5-star reviews. Bilingual.',
+    'Owner-operated house and commercial painters in Newport News, Hampton & Williamsburg VA. Military PCS move-in, pre-listing paint, rental turnovers, large homes 3000+ sq ft, commercial interior & exterior. 3-year warranty, on-time guarantee. Bilingual.',
   keywords: [
     'house painters Newport News VA',
     'PCS painter Hampton Roads',
     'military movers painting',
     'pre-listing painter Newport News',
-    'cabinet painters Hampton',
+    'commercial painter Newport News',
     'turnover painters Newport News',
-    'lead safe painter Hilton Village',
-    'exterior painter Hidenwood',
-    'Williamsburg residential painter'
+    'large home painter Hampton Roads',
+    'Williamsburg residential painter',
+    'exterior painter Hidenwood'
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     title:
-      "Alvy Color Changes — Newport News House Painters Built for Military Moves, Listings & Turnovers",
+      "Alvy Color Changes — Newport News House & Commercial Painters",
     description:
-      "Owner-operated. Licensed Realtor. Bilingual. We paint Newport News, Hampton, and Williamsburg homes so they're ready by your report date, your listing photos, or your next tenant — without the chaos.",
+      "Owner-operated. Licensed Realtor. Bilingual. We paint Newport News, Hampton, and Williamsburg homes and businesses on schedule — backed by a 3-year warranty and on-time guarantee.",
     type: 'website',
     url: SITE_URL
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Alvy Color Changes — Newport News Painters',
-    description: 'Military PCS, pre-listing, turnover. Owner-operated. 25+ 5-star reviews.'
+    description: 'Military PCS, pre-listing, commercial, large homes. Owner-operated. 5.0 on Google.'
   },
   other: {
     'geo.region': 'US-VA',
@@ -39,7 +39,6 @@ export const metadata = {
   }
 };
 
-// JSON-LD HomeAndConstructionBusiness schema
 const businessSchema = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
@@ -47,16 +46,15 @@ const businessSchema = {
   name: 'Alvy Color Changes LLC',
   alternateName: 'Alvy Color Changes',
   url: SITE_URL,
-  telephone: '+1-757-XXX-XXXX',
+  telephone: '+1-757-719-6269',
   email: 'jose@alvycolorchanges.com',
   description:
-    'Owner-operated house painters serving Newport News, Hampton, and Williamsburg VA. Specialists in military PCS move-in refresh, pre-listing paint, rental turnover, cabinets, and pre-1978 lead-safe historic repainting.',
+    'Owner-operated house and commercial painters serving Newport News, Hampton, and Williamsburg VA. Specialists in military PCS move-in refresh, pre-listing paint, rental turnovers, large homes 3,000+ sq ft, and commercial interior and exterior painting. 3-year warranty and on-time guarantee.',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Newport News',
     addressRegion: 'VA',
-    postalCode: '23606',
     addressCountry: 'US'
   },
   areaServed: [
@@ -123,18 +121,18 @@ const businessSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Pre-1978 Lead-Safe Historic Repaint',
+          name: 'Commercial Interior & Exterior Painting',
           description:
-            'EPA RRP-certified repainting for historic homes including Hilton Village, North End / Huntington Heights, and Olde Wythe.'
+            'Commercial painting for offices, retail, common areas, and restaurants. Coordinated crew, works around business hours, clean job sites.'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Cabinet Painting',
+          name: 'Large Homes 3,000+ sq ft',
           description:
-            'Spray-finish cabinet painting with proper prep — addresses yellowing from humidity and grease.'
+            'Estate-scale residential painting with a coordinated multi-painter crew. Detailed scope, daily progress, finished on the date promised.'
         }
       }
     ]

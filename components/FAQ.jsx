@@ -9,15 +9,15 @@ const faqs = [
   },
   {
     q: 'How fast can you get me an estimate?',
-    a: "48 hours from the time you reach out — usually faster. Jose is an owner-operator, so when you text Alvy, you're texting him directly. Estimates are always free."
+    a: "24 hours from the time you reach out — usually faster. Jose is an owner-operator, so when you text Alvy, you're texting him directly. Estimates are always free."
   },
   {
-    q: 'Do you paint pre-1978 homes? What about lead paint?',
-    a: "Yes. We're EPA Lead-Safe (RRP) certified, which is required for any paint-disturbing work on pre-1978 housing. We follow the containment, prep, and documentation rules properly. A lot of painters out here aren't certified — we are."
+    q: 'Do you paint commercial buildings?',
+    a: 'Yes — interior and exterior. Offices, retail, restaurants, common areas, property-manager spaces. We work around your hours so the business keeps moving, and we coordinate a crew so the job finishes on schedule.'
   },
   {
-    q: 'Do you paint cabinets without replacing them?',
-    a: "Yes. Most yellowing or peeling cabinets are fine structurally — they just need proper prep and the right paint system. We strip, prime, and spray-finish for a factory-grade result."
+    q: 'Can you handle a 3,000+ sq ft house?',
+    a: "Yes — that's actually where we shine. We have a crew that can put multiple painters on a big house simultaneously, so a 4,000 sq ft repaint doesn't drag on for a month. Detailed scope up front, daily progress, finished on the date we promised."
   },
   {
     q: 'What does a pre-listing paint refresh cost?',
@@ -33,11 +33,15 @@ const faqs = [
   },
   {
     q: 'Are you licensed and insured?',
-    a: 'Yes — fully licensed in Virginia and insured. BBB A+ accredited. Listed in the top 22% of licensed Virginia contractors per BuildZoom.'
+    a: 'Yes — fully licensed in Virginia and insured. Every job is backed by our 3-year no-peel, no-blister warranty and on-time guarantee.'
   },
   {
     q: 'Do you offer military discounts?',
     a: 'Our PCS Move-In Refresh package is priced specifically for military families — we bake the savings into the package pricing instead of stacking discounts. You get a clean fixed number that matches BAH-budget realities.'
+  },
+  {
+    q: 'What about cabinet refinishing?',
+    a: "We do it occasionally, but it's not our main focus. If cabinets are part of a bigger PCS or pre-listing job, we'll include them. For cabinet-only work, ask Alvy in the chat and we'll point you in the right direction."
   },
   {
     q: '¿Hablan español?',
@@ -70,7 +74,7 @@ export default function FAQ() {
       <div className="container-page max-w-3xl">
         <span className="pill">FAQ</span>
         <h2 className="font-display text-3xl sm:text-5xl font-semibold mt-4 leading-tight">
-          Questions Newport News homeowners actually ask.
+          Questions Peninsula homeowners actually ask.
         </h2>
         <div className="mt-10 divide-y divide-ink/10 border-y border-ink/10">
           {faqs.map((f, i) => (
@@ -84,7 +88,7 @@ export default function FAQ() {
                 className={`mt-1 inline-block w-6 h-6 shrink-0 rounded-full border border-ink/20 grid place-items-center text-xs transition-transform ${
                   open === i
                     ? 'rotate-45 bg-brand text-white border-brand'
-                    : ''
+                    : 'group-hover:border-brand/50'
                 }`}
               >
                 +
@@ -109,7 +113,10 @@ export default function FAQ() {
           <a href="#chat" className="text-brand underline underline-offset-4 hover:text-brand-dark">
             Ask Alvy in the chat above
           </a>{' '}
-          — or grab a free estimate.
+          or call us at{' '}
+          <a href="tel:+17577196269" className="text-brand underline underline-offset-4 hover:text-brand-dark">
+            (757) 719-6269
+          </a>.
         </p>
       </div>
     </section>

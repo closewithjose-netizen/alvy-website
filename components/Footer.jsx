@@ -1,15 +1,20 @@
 const badges = [
-  'BBB A+ Accredited',
-  'EPA Lead-Safe Certified',
+  '3-Year Warranty',
+  'On-Time Guarantee',
   'Licensed in Virginia',
   'Insured & Bonded',
-  'BuildZoom Top 22%'
+  '25+ 5-Star Reviews'
 ];
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-ink text-cream py-16">
-      <div className="container-page">
+    <footer id="contact" className="bg-ink text-cream py-16 relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-60 -right-40 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl"
+        style={{ background: 'radial-gradient(closest-side, #E8542B, transparent)' }}
+      />
+      <div className="container-page relative">
         <div className="grid sm:grid-cols-3 gap-10">
           <div className="sm:col-span-2">
             <div className="font-display text-2xl font-semibold">
@@ -19,10 +24,13 @@ export default function Footer() {
               Owner-operated house painters serving the Peninsula.
             </p>
             <address className="not-italic mt-6 text-sm text-cream/80 space-y-1">
-              <div>Newport News, Virginia 23606</div>
+              <div>Newport News, Virginia</div>
               <div>
-                <a href="tel:+17575550000" className="hover:text-brand">
-                  (757) XXX-XXXX
+                <a
+                  href="tel:+17577196269"
+                  className="hover:text-brand text-lg font-semibold"
+                >
+                  (757) 719-6269
                 </a>
               </div>
               <div>
@@ -43,31 +51,12 @@ export default function Footer() {
               Jump to
             </div>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#chat" className="hover:text-brand">
-                  Start a chat
-                </a>
-              </li>
-              <li>
-                <a href="#offers" className="hover:text-brand">
-                  What we build for
-                </a>
-              </li>
-              <li>
-                <a href="#why" className="hover:text-brand">
-                  Why us
-                </a>
-              </li>
-              <li>
-                <a href="#neighborhoods" className="hover:text-brand">
-                  Neighborhoods
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-brand">
-                  FAQ
-                </a>
-              </li>
+              <li><a href="#chat" className="hover:text-brand">Start a chat</a></li>
+              <li><a href="#offers" className="hover:text-brand">What we do</a></li>
+              <li><a href="#why" className="hover:text-brand">Why us</a></li>
+              <li><a href="#reviews" className="hover:text-brand">Reviews</a></li>
+              <li><a href="#neighborhoods" className="hover:text-brand">Neighborhoods</a></li>
+              <li><a href="#faq" className="hover:text-brand">FAQ</a></li>
             </ul>
           </div>
         </div>
