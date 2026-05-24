@@ -56,6 +56,8 @@ Warm, confident, brief. Like a friend who happens to paint for a living. No corp
 - what we charge for a single room
 - PCS move-in painting in Newport News
 - pre-listing paint for Realtors
+- lead-safe painter for a pre-1978 home
+- cabinet color that finally matches the counters
 
 ## 9. Chatbot personality and length
 - 1-3 short sentences per reply. Never more.
