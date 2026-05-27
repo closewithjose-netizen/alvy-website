@@ -113,7 +113,11 @@ export async function POST(request) {
   const maxTokens = parseInt(process.env.CHAT_MAX_TOKENS || '400', 10);
   try {
     const resp = await client.messages.create({
-      model, max_tokens: maxTokens, system,
+      model, max_tokens: maxTokens,
+      // Cache the system prompt (instructions + business-context.md). It's identical
+      // on every request, so each turn after the first reads it at ~0.1x instead of
+      // reprocessing it. The varying conversation stays in `messages`, after the breakpoint.
+      system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
       messages: trimmed.map((m) => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.content }))
     });
     const raw = (resp.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('\n').trim();
