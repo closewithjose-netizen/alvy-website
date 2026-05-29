@@ -1,6 +1,6 @@
 'use client';
 
-import HeroChat from '../components/HeroChat';
+import LeadForm from '../components/LeadForm';
 import TrustStrip from '../components/TrustStrip';
 import Offers from '../components/Offers';
 import WhyAlvy from '../components/WhyAlvy';
@@ -12,9 +12,9 @@ import Footer from '../components/Footer';
 export default function HomePage() {
   return (
     <main className="bg-cream">
-      {/* ─── HERO (chat-first, unchanged) ─────────────────────── */}
+      {/* ─── HERO (form-first) ─────────────────────────────────── */}
       <section
-        id="chat"
+        id="estimate"
         className="min-h-[100dvh] flex flex-col relative overflow-hidden"
       >
         <div
@@ -27,7 +27,7 @@ export default function HomePage() {
         />
         <header className="relative z-10 px-6 py-5 flex items-center justify-between">
           <div className="font-display text-lg font-semibold">
-            Alvy <span className="text-brand">Color Changes</span>
+            Alvarez <span className="text-brand">Painters</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm text-ink/60">
             <a href="#offers" className="hover:text-ink">What we do</a>
@@ -43,7 +43,7 @@ export default function HomePage() {
           </nav>
         </header>
         <div className="relative z-10 flex-1 flex items-center justify-center px-4 pb-10">
-          <HeroChat />
+          <LeadForm />
         </div>
         <div className="relative z-10 pb-6 flex flex-col items-center gap-3">
           <a

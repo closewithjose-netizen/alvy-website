@@ -117,53 +117,49 @@ No exclamation points. No emojis. No corporate filler. No "we pride ourselves on
 
 ---
 
-## 9. Chatbot personality and length
+## 9. Lead form behavior (replaces the old chatbot)
 
-- 1-3 short sentences per reply. Never more.
-- One question at a time. Never stack questions.
-- No emojis, no markdown, no exclamation points.
-- Sound like a professional contractor texting back — confident, brief, helpful.
-- For commercial inquiries: ask about their business type and space size early.
-- Mention "free estimate" naturally when it fits.
+The website hero is a short lead-capture form, not a chatbot. The form has a Commercial/Residential toggle that swaps the fields shown.
 
----
+**Common fields (both lanes):**
+- Name
+- Phone
+- Email
+- Timeline (ASAP / Within 2 weeks / This month / Next month / Just gathering info)
 
-## 10. Chatbot qualification flow
+**Commercial lane adds:**
+- Business name
+- Space type (Office / Restaurant / Retail / Medical / Hotel / Auto dealership / Multi-location / Other)
+- Project address
 
-**For commercial leads** — collect ALL SIX in this order:
+**Residential lane adds:**
+- Project address
+- Scope (Full interior / Full exterior / Both / Pre-listing refresh / 3,000+ sq ft home)
 
-1. Name → "What is your name?"
-2. Business name + type → "What is the business and what kind of space — office, restaurant, retail, medical?"
-3. Address → "What is the address for the project?"
-4. Phone → "Best number for Jose to reach you?"
-5. Email → "And best email for follow-up?" ← REQUIRED
-6. Timeline → "When are you looking to get started?"
+Submit button reads "Get my free estimate." After submit, the form replaces itself with a "Got it. Jose will reach out within 24 hours" confirmation and the office phone number.
 
-**For residential leads** — collect ALL FIVE:
+## 10. Where leads go
 
-1. Name → "What is your name?"
-2. Address → "What is the address for the project?"
-3. Phone → "Best number for Jose to reach you?"
-4. Email → "And best email for follow-up?" ← REQUIRED
-5. Project scope → "Is this a full interior, full exterior, or both?"
-6. Timeline → "When works for a quick walkthrough?"
+Form submissions fan out in parallel to:
 
-A lead is qualified only when name + email + (phone or address) are captured. EMAIL IS REQUIRED — never close the flow without it.
+1. **Monday.com board 18414598724** — primary CRM record (item created + full lead details posted as an update).
+2. **Instant notification webhook** (Zapier/Make) — Jose gets an email at jose@alvarezpainters.com and an SMS at (757) 719-6269 within seconds.
+3. **Google Sheets** (optional) — append-only lead log, useful for analytics and as a backup.
 
----
+Each integration is independent. If Monday is down, the notification still fires. If the webhook is down, Monday still gets the lead.
 
-## 11. Chatbot guardrails
+## 11. Form guardrails
 
-- Never quote a specific price.
+- All fields marked required must be filled before submit enables.
+- Email must match a basic email pattern.
+- Phone must have at least 10 digits.
+- Commercial lane requires business name.
+- Submit button shows a "Sending…" state during the request and re-enables on error.
+- On error, surface: "Couldn't send that. Try again, or call (757) 719-6269." Never silently fail.
+- Never quote a specific price anywhere on the site or in form copy.
 - Never promise specific start dates.
-- Never pretend to be human — say: "I am Alvarez Painters' assistant — AI helping route you to Jose."
 - Never claim BBB accreditation or EPA Lead-Safe certification — we do not have those.
-- If asked about small jobs (accent walls, single rooms, touch-ups): "That is not our focus — we do full projects. If you have a full interior, commercial space, or larger residential job, we are the right fit."
-- When asked about the company, answer briefly (1-2 sentences) then offer two paths: free estimate, or call (757) 719-6269.
-- Redirect off-topic questions back to painting or to lead collection.
-- If someone asks if we do handyman work, patch jobs, or small repairs: "We are a full painting crew — we focus on complete projects, not small repairs. If you have a larger project in mind, we would love to help."
-
----
+- For small-job inquiries we still don't quote: the FAQ and "What we do" sections make clear we focus on full projects, $3,500 minimum.
 
 ## 12. What is on the public site
 

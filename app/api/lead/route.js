@@ -6,14 +6,15 @@ export const dynamic = 'force-dynamic';
 /**
  * POST /api/lead
  *
- * Body: { lead: { name, contact, project, service_area, summary }, conversation: [...] }
+ * Body: { lead: { ... }, conversation?: [...] }
  *
  * Fans the lead out to:
  *   1. Monday.com (creates an item on the configured board)
- *   2. Google Sheets (appends a row)
- *   3. Email notification (optional — uses a webhook you wire up if you like)
+ *   2. Instant notification webhook (Zapier/Make → email + SMS) — optional
+ *   3. Google Sheets append — optional
  *
- * Each integration is independent — if Monday fails, the Sheet still gets it.
+ * Each integration is independent — if Monday fails, the notify webhook
+ * still fires, and vice versa.
  */
 export async function POST(request) {
   const body = await request.json().catch(() => null);
@@ -28,13 +29,15 @@ export async function POST(request) {
 
   const results = await Promise.allSettled([
     pushToMonday(lead, conversationText),
+    notify(lead),
     appendToSheet(lead, conversationText)
   ]);
 
   return Response.json({
     ok: true,
     monday: results[0].status,
-    sheet: results[1].status,
+    notify: results[1].status,
+    sheet: results[2].status,
     error: results
       .filter((r) => r.status === 'rejected')
       .map((r) => String(r.reason))
@@ -50,16 +53,10 @@ async function pushToMonday(lead, conversationText) {
   }
   const groupId = process.env.MONDAY_GROUP_ID || 'topics';
 
-  // Monday's column_values is a JSON-encoded string keyed by column ID.
-  // We use a generic "text" payload so the user can map their columns
-  // later. To send to specific columns, replace the keys below with the
-  // column IDs from their board.
-  const columnValues = {
-    // Open the board → Settings (top-right) → "Developers" → see column IDs.
-    // For now we stuff everything in the item name + a single update.
-  };
-
   const itemName = `${lead.name || 'Unknown'} — ${lead.project || 'New lead'}`;
+
+  // Generic payload — column IDs can be wired later via Monday board settings.
+  const columnValues = {};
 
   const mutation = `
     mutation CreateLead($boardId: ID!, $groupId: String!, $itemName: String!, $columnValues: JSON!) {
@@ -95,20 +92,28 @@ async function pushToMonday(lead, conversationText) {
   }
   const itemId = data?.data?.create_item?.id;
 
-  // Attach the conversation as an update on the item
+  // Attach full lead details as an update on the item.
   if (itemId) {
     const update = `
       mutation AddUpdate($itemId: ID!, $body: String!) {
         create_update(item_id: $itemId, body: $body) { id }
       }`;
-    const updateBody = [
-      `Contact: ${lead.contact || '—'}`,
-      `Service area: ${lead.service_area || '—'}`,
-      `Summary: ${lead.summary || '—'}`,
-      '',
-      '── Full conversation ──',
-      conversationText
-    ].join('\n');
+
+    const lines = [
+      `Lane: ${lead.lane || '—'}`,
+      `Name: ${lead.name || '—'}`,
+      `Email: ${lead.email || '—'}`,
+      `Phone: ${lead.phone || '—'}`,
+      `Address: ${lead.address || lead.service_area || '—'}`,
+      lead.business_name ? `Business: ${lead.business_name} (${lead.business_type || '—'})` : null,
+      lead.scope ? `Scope: ${lead.scope}` : null,
+      `Timeline: ${lead.timeline || '—'}`,
+      `Summary: ${lead.summary || '—'}`
+    ].filter(Boolean);
+
+    if (conversationText) {
+      lines.push('', '── Conversation log ──', conversationText);
+    }
 
     await fetch('https://api.monday.com/v2', {
       method: 'POST',
@@ -119,12 +124,72 @@ async function pushToMonday(lead, conversationText) {
       },
       body: JSON.stringify({
         query: update,
-        variables: { itemId: String(itemId), body: updateBody }
+        variables: { itemId: String(itemId), body: lines.join('\n') }
       })
     });
   }
 
   return { itemId };
+}
+
+/* ─── Instant notification (email + SMS via Zapier/Make) ──────────────── */
+async function notify(lead) {
+  const webhook = process.env.LEAD_NOTIFY_WEBHOOK_URL;
+  if (!webhook) {
+    throw new Error('Notify webhook not configured');
+  }
+
+  const subject =
+    lead.lane === 'commercial'
+      ? `New commercial lead — ${lead.business_name || lead.name}`
+      : `New residential lead — ${lead.name}`;
+
+  const smsBody = [
+    `${lead.lane === 'commercial' ? 'COMMERCIAL' : 'RESIDENTIAL'} lead`,
+    `${lead.name} · ${lead.phone}`,
+    lead.business_name ? `${lead.business_name} (${lead.business_type})` : lead.scope,
+    lead.address,
+    `Timeline: ${lead.timeline}`
+  ].filter(Boolean).join('\n');
+
+  const html = [
+    `<h2>${subject}</h2>`,
+    `<p><strong>Name:</strong> ${escapeHtml(lead.name || '')}</p>`,
+    `<p><strong>Phone:</strong> <a href="tel:${escapeHtml(lead.phone || '')}">${escapeHtml(lead.phone || '')}</a></p>`,
+    `<p><strong>Email:</strong> <a href="mailto:${escapeHtml(lead.email || '')}">${escapeHtml(lead.email || '')}</a></p>`,
+    lead.business_name ? `<p><strong>Business:</strong> ${escapeHtml(lead.business_name)} (${escapeHtml(lead.business_type || '')})</p>` : '',
+    lead.scope ? `<p><strong>Scope:</strong> ${escapeHtml(lead.scope)}</p>` : '',
+    `<p><strong>Address:</strong> ${escapeHtml(lead.address || lead.service_area || '')}</p>`,
+    `<p><strong>Timeline:</strong> ${escapeHtml(lead.timeline || '')}</p>`,
+    `<p><strong>Summary:</strong> ${escapeHtml(lead.summary || '')}</p>`
+  ].filter(Boolean).join('\n');
+
+  const r = await fetch(webhook, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      to: process.env.LEAD_NOTIFY_EMAIL || 'jose@alvarezpainters.com',
+      sms_to: process.env.LEAD_NOTIFY_SMS || '+17577196269',
+      subject,
+      text: smsBody,
+      html,
+      lead
+    })
+  });
+
+  if (!r.ok) {
+    throw new Error(`Notify webhook ${r.status}`);
+  }
+  return { sent: true };
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 /* ─── Google Sheets ───────────────────────────────────────────────────── */
@@ -148,17 +213,22 @@ async function appendToSheet(lead, conversationText) {
 
   const row = [
     new Date().toISOString(),
+    lead.lane || '',
     lead.name || '',
-    lead.contact || '',
-    lead.project || '',
-    lead.service_area || '',
+    lead.email || '',
+    lead.phone || '',
+    lead.business_name || '',
+    lead.business_type || '',
+    lead.scope || '',
+    lead.address || lead.service_area || '',
+    lead.timeline || '',
     lead.summary || '',
     conversationText
   ];
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: sheetId,
-    range: `${tab}!A:G`,
+    range: `${tab}!A:L`,
     valueInputOption: 'USER_ENTERED',
     requestBody: { values: [row] }
   });

@@ -40,3 +40,12 @@
   background-size: 200% 100%;
   animation: shimmer 2.4s linear infinite;
 }
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5
+      text-base text-ink placeholder:text-ink/30
+      focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/15
+      transition-colors;
+  }
+}
