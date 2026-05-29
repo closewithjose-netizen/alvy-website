@@ -1,18 +1,33 @@
 const pillars = [
   {
-    headline: 'Color is the actual product.',
+    headline: 'A professional female crew.',
     body:
-      'Most painters hand you a fan deck and shrug. We walk the rooms with you, talk about light direction, put real samples on your wall, and you decide with confidence.'
+      'Most of our painters are women. Clients — especially homeowners — consistently say they felt at ease and trusted us in their space. It is our most consistent compliment and the thing competitors cannot copy.'
   },
   {
-    headline: 'We show up when we say we will.',
+    headline: 'We spec before we quote.',
     body:
-      "Estimate in 24 hours. Start dates honored. Finish dates honored. If we say Tuesday, we're knocking on the door Tuesday."
+      'Medical office gets antimicrobial paint. High-traffic door gets a commercial-grade coating. We know which product belongs in which environment and why — before we ever pick up a brush.'
   },
   {
-    headline: 'Clean enough to invite the in-laws over mid-job.',
+    headline: 'Jose answers the phone.',
     body:
-      'Drop cloths every day. Daily clean-up. No paint on the lawn, no roller covers in the bushes. You can keep living in the house while we work.'
+      'No call center, no franchise rep, no assistant. When you contact Alvarez Painters, you are talking to Jose. Every estimate, every question, every update comes directly from him.'
+  },
+  {
+    headline: 'Latino-owned. Bilingual. LGBTQ+ friendly.',
+    body:
+      'Jose Melendez Alvarez, Newport News based. The crew is bilingual — reach out in Spanish or English, you will get the same quality of service either way.'
+  },
+  {
+    headline: '3-year warranty on every job.',
+    body:
+      'No-peel, no-blister guarantee. If something goes wrong with our work in three years, we come back and make it right. No fine print, no runaround.'
+  },
+  {
+    headline: 'On-time guarantee.',
+    body:
+      'We finish when we said, or you get an account credit. We build schedules we can keep and we keep them. If we say Thursday, we mean Thursday.'
   }
 ];
 
@@ -22,7 +37,7 @@ export default function WhyUs() {
       <div className="container-page">
         <span className="pill bg-cream/10 text-cream">Why us</span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4 max-w-3xl">
-          Three reasons you'll never call another painter.
+          Six things that make us worth calling.
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {pillars.map((p, i) => (
