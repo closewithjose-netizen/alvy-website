@@ -1,18 +1,33 @@
 const pillars = [
   {
-    headline: 'Color is the actual product.',
+    headline: 'Professional female crew.',
     body:
-      'Most painters hand you a fan deck and shrug. We walk the rooms with you, talk about light direction, put real samples on your wall, and you decide with confidence.'
+      'Most of our painters are women. Clients — especially homeowners — consistently say they felt more at ease with our crew in their space. It is our most consistent compliment and a real differentiator in this market.'
   },
   {
-    headline: 'We show up when we say we will.',
+    headline: 'Spec-level product expertise.',
     body:
-      "Estimate in 24 hours. Start dates honored. Finish dates honored. If we say Tuesday, we're knocking on the door Tuesday."
+      'We know which product belongs in which environment before we ever pick up a brush. Medical office gets antimicrobial paint. High-traffic door gets a commercial-grade coating. Competitors guess. We spec correctly.'
   },
   {
-    headline: 'Clean enough to invite the in-laws over mid-job.',
+    headline: 'Owner-operated. Jose answers personally.',
     body:
-      'Drop cloths every day. Daily clean-up. No paint on the lawn, no roller covers in the bushes. You can keep living in the house while we work.'
+      'When you contact Alvarez Painters, you reach Jose. Not a call center, not a franchise rep. He shows up for the estimate, he manages the job, and his number is the one on the card.'
+  },
+  {
+    headline: 'Latino-owned. Bilingual. LGBTQ+ friendly.',
+    body:
+      'Jose Melendez Alvarez, Newport News based. Bilingual English and Spanish — owner and crew. Every client treated with the same professionalism and respect. No exceptions.'
+  },
+  {
+    headline: '3-year warranty on every job.',
+    body:
+      'No-peel, no-blister guarantee. If it fails inside three years, we come back and make it right. No argument, no invoice.'
+  },
+  {
+    headline: 'On-time guarantee.',
+    body:
+      'We finish when we said we would, or you get an account credit. Estimate in 24 hours. Start dates honored. Finish dates honored.'
   }
 ];
 
@@ -22,7 +37,7 @@ export default function WhyUs() {
       <div className="container-page">
         <span className="pill bg-cream/10 text-cream">Why us</span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4 max-w-3xl">
-          Three reasons you'll never call another painter.
+          Six reasons clients don't look for another painter after us.
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {pillars.map((p, i) => (
