@@ -1,18 +1,33 @@
 const pillars = [
   {
-    headline: 'Color is the actual product.',
+    headline: 'Professional female crew.',
     body:
-      'Most painters hand you a fan deck and shrug. We walk the rooms with you, talk about light direction, put real samples on your wall, and you decide with confidence.'
+      'Most of our painters are women. Clients — especially homeowners — consistently say they felt more comfortable with our crew in their space. It is our most consistent compliment and our clearest edge in a market full of rough-looking operations.'
   },
   {
-    headline: 'We show up when we say we will.',
+    headline: 'Spec-level product expertise.',
     body:
-      "Estimate in 24 hours. Start dates honored. Finish dates honored. If we say Tuesday, we're knocking on the door Tuesday."
+      'We know which product belongs in which environment and why. Medical office gets antimicrobial paint. High-traffic door gets a commercial-grade coating. We spec correctly before we ever pick up a brush — competitors rely on others for this. We come with the full package.'
   },
   {
-    headline: 'Clean enough to invite the in-laws over mid-job.',
+    headline: 'Owner-operated. Jose answers personally.',
     body:
-      'Drop cloths every day. Daily clean-up. No paint on the lawn, no roller covers in the bushes. You can keep living in the house while we work.'
+      'When you contact Alvarez Painters, you are talking to Jose. Not a call center, not a franchise rep. Jose Melendez Alvarez — Newport News based, licensed VA Realtor, bilingual. He answers.'
+  },
+  {
+    headline: 'Full crew. Full commitment.',
+    body:
+      'Eight painters who show up together, execute together, and finish on schedule. No subcontracting, no gaps, no surprises. A coordinated crew built for commercial projects and large homes — not a one-person side hustle.'
+  },
+  {
+    headline: '3-year warranty. No-peel, no-blister.',
+    body:
+      'Every job is backed by a 3-year warranty on workmanship and materials. If it peels or blisters, we come back and fix it. No arguments.'
+  },
+  {
+    headline: 'On-time guarantee.',
+    body:
+      'We finish when we said we would — or you get an account credit. We schedule with real dates and honor them. If we say Friday, we mean Friday.'
   }
 ];
 
@@ -22,7 +37,7 @@ export default function WhyUs() {
       <div className="container-page">
         <span className="pill bg-cream/10 text-cream">Why us</span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4 max-w-3xl">
-          Three reasons you'll never call another painter.
+          Six reasons Alvarez Painters is a different kind of crew.
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {pillars.map((p, i) => (
@@ -38,6 +53,13 @@ export default function WhyUs() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-12 flex flex-wrap gap-3 text-sm text-cream/60">
+          <span className="rounded-full border border-cream/20 px-4 py-1.5">Latino-owned</span>
+          <span className="rounded-full border border-cream/20 px-4 py-1.5">Bilingual English + Spanish</span>
+          <span className="rounded-full border border-cream/20 px-4 py-1.5">LGBTQ+ friendly</span>
+          <span className="rounded-full border border-cream/20 px-4 py-1.5">Licensed &amp; Insured in Virginia</span>
+          <span className="rounded-full border border-cream/20 px-4 py-1.5">5.0 Google · 25+ reviews</span>
         </div>
       </div>
     </section>
