@@ -114,6 +114,8 @@ No exclamation points. No emojis. No corporate filler. No "we pride ourselves on
 - painting a 3,000+ sq ft house
 - our 3-year warranty
 - the on-time guarantee
+- a crew that specs the right paint before we touch a wall
+- the kind of job where eight painters show up and it actually gets done
 
 ---
 
