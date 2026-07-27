@@ -52,13 +52,22 @@ export default function Footer() {
               Jump to
             </div>
             <ul className="space-y-2 text-sm">
-              <li><a href="#chat" className="hover:text-brand">Start a chat</a></li>
-              <li><a href="#offers" className="hover:text-brand">What we do</a></li>
-              <li><a href="#why" className="hover:text-brand">Why us</a></li>
-              <li><a href="#reviews" className="hover:text-brand">Reviews</a></li>
-              <li><a href="#neighborhoods" className="hover:text-brand">Neighborhoods</a></li>
-              <li><a href="#faq" className="hover:text-brand">FAQ</a></li>
+              <li><a href="/#estimate" className="hover:text-brand">Free estimate</a></li>
+              <li><a href="/#offers" className="hover:text-brand">What we do</a></li>
+              <li><a href="/#why" className="hover:text-brand">Why us</a></li>
+              <li><a href="/#reviews" className="hover:text-brand">Reviews</a></li>
+              <li><a href="/#faq" className="hover:text-brand">FAQ</a></li>
               <li><a href="/blog" className="hover:text-brand">Blog</a></li>
+            </ul>
+            <div className="text-xs uppercase tracking-wider text-cream/40 mb-3 mt-8">
+              Commercial services
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/commercial-painting-newport-news" className="hover:text-brand">Commercial painting — Newport News</a></li>
+              <li><a href="/office-painting-hampton" className="hover:text-brand">Office painting — Hampton</a></li>
+              <li><a href="/medical-office-painting-newport-news" className="hover:text-brand">Medical office painting</a></li>
+              <li><a href="/commercial-painting-norfolk" className="hover:text-brand">Commercial painting — Norfolk</a></li>
+              <li><a href="/restaurant-painting-hampton-roads" className="hover:text-brand">Restaurant painting — Hampton Roads</a></li>
             </ul>
           </div>
         </div>

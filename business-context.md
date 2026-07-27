@@ -25,7 +25,7 @@ Alvarez Painters is a professional commercial and residential painting company b
 
 **Secondary — Residential:**
 - Homeowners in established neighborhoods ready for a full interior or exterior repaint
-- Pre-listing sellers who need their home list-ready fast (Jose is a licensed VA Realtor — he knows what buyers notice)
+- Pre-listing sellers who need their home list-ready fast (we know what buyers notice and what listing photos need)
 - High-end homes 3,000+ sq ft that need a real crew, not a side hustle
 
 **We do NOT take small jobs.** No accent walls, no single rooms, no touch-ups, no handyman work. We are a full-project operation.
@@ -54,9 +54,8 @@ Alvarez Painters is a professional commercial and residential painting company b
 
 ## 4. What makes us different
 
-- **Professional female crew** — most of our painters are women. Clients feel immediately at ease and trust us in their space. It is our most consistent compliment and our most powerful differentiator in a market full of rough-looking crews.
 - **Spec-level product expertise** — Jose knows what product belongs where and why. Medical-grade antimicrobial (Sherwin-Williams Symmetry), commercial-grade door coatings (Forte), high-traffic surfaces, specialty substrates — we spec correctly before we ever pick up a brush. Competitors rely on others for this knowledge. We come with a full package.
-- **Full crew, full package** — a coordinated crew of 8 painters who show up together, execute together, and finish on schedule. No subcontracting, no gaps, no surprises.
+- **Coordinated professional crew** — a coordinated crew scaled to each job, owner-supervised from scope to final walkthrough. Multiple painters on big jobs so timelines hold.
 - **Owner-operated** — when you contact Alvarez Painters, you are talking to Jose. Not a call center, not a franchise rep. Jose answers personally.
 - **Latino-owned** — Jose Melendez Alvarez, Newport News based.
 - **Bilingual English + Spanish** — bilingual owner and crew.
@@ -70,7 +69,8 @@ Alvarez Painters is a professional commercial and residential painting company b
 
 ## 5. Service area
 
-Primary: Newport News, Hampton, York County, Poquoson, VA.
+Primary (Peninsula): Newport News, Hampton, York County, Poquoson, VA.
+Southside (added 2026-07-08): Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk. We serve all of Hampton Roads. Williamsburg is NOT a primary area.
 
 Commercial corridors we target: Jefferson Ave (23602), Oyster Point Business District, Mercury Blvd (Hampton), Warwick Blvd, Coliseum Drive (Hampton).
 
@@ -170,19 +170,19 @@ Below the hero (scroll-down content in this order):
 - Trust strip: 5.0 Google · 3-yr warranty · 24h estimate · on-time guarantee · Professional crew
 - "What we do" — service cards in this priority order:
   1. **Commercial Interior** (featured) — offices, restaurants, retail, medical, multi-location programs
-  2. **Pre-Listing Paint Refresh** — Jose is a licensed VA Realtor, knows what listings need
+  2. **Pre-Listing Paint Refresh** — we know what listings need and what buyers notice
   3. **Full Interior Repaints** — full homes only, coordinated crew
   4. **Full Exterior Repaints** — full homes only
   5. **Large Homes 3,000+ sq ft** — crew built for big jobs
 - "Why us" — 6 pillars:
-  1. Professional female crew — trusted in your space
-  2. Spec-level product expertise — we know what works and why
+  1. Spec-level product expertise — we know what works and why
+  2. Coordinated professional crew — owner-supervised on every job
   3. Owner-operated — Jose answers personally
   4. Latino-owned · Bilingual · LGBTQ+ friendly
   5. 3-year warranty on every job
   6. On-time guarantee or you get an account credit
 - Reviews (3 real Google reviews — Juliet Bourque, Jessica Tenezaca, Sabrina Rauch)
-- "Where we work" — Newport News, Hampton, York County with neighborhood chips
+- "Where we work" — all of Hampton Roads: Newport News, Hampton, York County, Poquoson + Southside (Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk) with neighborhood chips
 - FAQ (commercial + residential, updated below)
 - Footer: phone (757) 719-6269 · email jose@alvarezpainters.com · Licensed & Insured · 3-Year Warranty · On-Time Guarantee · 25+ Five-Star Reviews
 
@@ -202,8 +202,8 @@ Yes. If you own or manage more than one location, we can build a program around 
 **Q: What does spec-grade painting mean?**
 It means we know which product belongs in which environment and why. A medical office gets antimicrobial paint. A high-traffic door gets a commercial-grade coating. We spec the right product before we quote, not after.
 
-**Q: Why is most of your crew women?**
-Because they are the best painters we have found. Our clients — especially homeowners — consistently say they felt more comfortable having our crew in their space. It is something we are proud of.
+**Q: Should I stain or paint my cabinets and trim?**
+Depends on the wood and the goal. Stain changes the color while keeping the grain — but it can only go darker. Going lighter means paint. We do both and tell you honestly which fits your project.
 
 **Q: Can you handle a 3,000+ sq ft house?**
 Yes — that is where we shine. We put multiple painters on a big job simultaneously so a 4,000 sq ft repaint does not drag on for a month. Detailed scope, daily progress, finished on the date we promised.
@@ -212,10 +212,10 @@ Yes — that is where we shine. We put multiple painters on a big job simultaneo
 24 hours from the time you reach out — usually faster. For commercial projects we come to your space. For residential we do a quick walkthrough. Estimates are always free.
 
 **Q: What is the pre-listing paint refresh?**
-A complete interior or exterior repaint scoped specifically for homes going on the market. Jose is a licensed VA Realtor — he knows what buyers notice and what listing photos need. Scoped in 48 hours, on the wall in a week.
+A complete interior or exterior repaint scoped specifically for homes going on the market. We have prepped listings across Hampton Roads — we know what buyers notice and what listing photos need. Scoped in 48 hours, on the wall in a week.
 
-**Q: What neighborhoods do you serve?**
-Newport News, Hampton, and York County are our primary areas. We regularly work in Kiln Creek, Port Warwick, Hidenwood, Riverside, Merry Point Estates, Hilton Village, Fox Hill, Farmington, Olde Wythe, and Phoebus. Commercial work throughout the Jefferson Ave, Oyster Point, and Mercury Blvd corridors.
+**Q: What areas do you serve?**
+All of Hampton Roads. Peninsula: Newport News, Hampton, York County, Poquoson — including Kiln Creek, Port Warwick, Hidenwood, Riverside, Hilton Village, Fox Hill, Farmington, Olde Wythe, and Phoebus. Southside: Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk. Commercial work throughout the Jefferson Ave, Oyster Point, and Mercury Blvd corridors.
 
 **Q: Are you licensed and insured?**
 Yes — fully licensed in Virginia under Alvy Color Changes LLC (DBA Alvarez Painters) and insured. Every job is backed by our 3-year no-peel, no-blister warranty and on-time guarantee.
@@ -242,6 +242,7 @@ Blog voice follows section 7. English body with a short "En español" summary bl
 
 ## 15. Recent updates
 
+- 2026-07-27 (2): Service area expanded sitewide to all Hampton Roads — Southside cities (Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk) added to schema, metadata, neighborhoods section, and FAQ. Williamsburg removed. Added 5 commercial service/location pages: /commercial-painting-newport-news, /office-painting-hampton, /medical-office-painting-newport-news, /commercial-painting-norfolk, /restaurant-painting-hampton-roads (defined in lib/servicePages.js, rendered by app/[slug]/page.jsx — do not remove). Homepage Offers/FAQ/WhyAlvy rebuilt commercial-first per this document. Removed "licensed VA Realtor" claim (license inactive June 2026 — never reintroduce), removed "professional female crew" and "crew of 8 / no subcontracting" claims (crew model changed July 2026 — use "coordinated professional crew, owner-supervised"). Added og-image.png social share image.
 - 2026-07-27: Added blog at /blog with first two posts (light colors make small homes feel bigger; staining vs painting). Added sitemap.xml and robots.txt via Next.js app routes. Fixed footer NAP: brand now Alvarez Painters, email now jose@alvarezpainters.com. Added Blog to header nav and footer.
 
 - 2026-05-26: Full rebrand to Alvarez Painters. Virginia SCC DBA registered — Filing No. 26052610046534. DPOR name change form A406-NAMECHG submitted with SCC certificate.

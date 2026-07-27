@@ -1,4 +1,5 @@
 import { posts } from '../lib/posts';
+import { servicePages } from '../lib/servicePages';
 
 const SITE_URL = 'https://alvarezpainters.com';
 
@@ -8,6 +9,13 @@ export default function sitemap() {
     lastModified: new Date(`${post.date}T12:00:00Z`),
     changeFrequency: 'monthly',
     priority: 0.7
+  }));
+
+  const serviceEntries = servicePages.map((page) => ({
+    url: `${SITE_URL}/${page.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.9
   }));
 
   return [
@@ -23,6 +31,7 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.8
     },
+    ...serviceEntries,
     ...blogEntries
   ];
 }

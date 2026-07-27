@@ -4,52 +4,52 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: "What's a PCS Move-In Refresh?",
-    a: "It's a fixed-price painting package built specifically for military families relocating to Hampton Roads. We work backward from your report date — 7, 10, or 14-day turn options, photo documentation throughout, and an inspection-grade finish. You give us the keys; we hand you back a move-in-ready house."
-  },
-  {
-    q: 'How fast can you get me an estimate?',
-    a: "24 hours from the time you reach out — usually faster. Jose is an owner-operator, so when you text Alvy, you're texting him directly. Estimates are always free."
+    q: 'What kind of projects do you take?',
+    a: 'Full commercial and residential paint projects. We focus on complete interiors, complete exteriors, and commercial spaces — not single rooms, accent walls, or patch jobs.'
   },
   {
     q: 'Do you paint commercial buildings?',
-    a: 'Yes — interior and exterior. Offices, retail, restaurants, common areas, property-manager spaces. We work around your hours so the business keeps moving, and we coordinate a crew so the job finishes on schedule.'
+    a: 'Yes — commercial interior and exterior is our primary focus. Offices, restaurants, retail spaces, medical offices, multi-location programs. We work around your business hours and coordinate the crew so the job finishes on schedule.'
+  },
+  {
+    q: 'Do you work with multi-location businesses?',
+    a: 'Yes. If you own or manage more than one location, we can build a program around your sites. One relationship, one vendor, consistent results across all your locations.'
+  },
+  {
+    q: 'What does spec-grade painting mean?',
+    a: 'It means we know which product belongs in which environment and why. A medical office gets antimicrobial paint. A high-traffic door gets a commercial-grade coating. We spec the right product before we quote, not after.'
   },
   {
     q: 'Can you handle a 3,000+ sq ft house?',
-    a: "Yes — that's actually where we shine. We have a crew that can put multiple painters on a big house simultaneously, so a 4,000 sq ft repaint doesn't drag on for a month. Detailed scope up front, daily progress, finished on the date we promised."
+    a: 'Yes — that is where we shine. We put multiple painters on a big job simultaneously so a 4,000 sq ft repaint does not drag on for a month. Detailed scope, daily progress, finished on the date we promised.'
   },
   {
-    q: 'What does a pre-listing paint refresh cost?',
-    a: 'Depends on size and scope. We give a real number after a quick walkthrough — usually within 24 hours. No "starts at" hand-waves, and the estimate is always free.'
+    q: 'How fast can you get me an estimate?',
+    a: '24 hours from the time you reach out — usually faster. For commercial projects we come to your space. For residential we do a quick walkthrough. Estimates are always free.'
   },
   {
-    q: 'Do you work with property managers?',
-    a: 'Yes — turnover painting is one of our core services. We already work with ABBITT Realty. Fixed room-by-room pricing, 24-48 hour estimates, photo documentation, and invoicing formatted for owner approval.'
+    q: 'What is the pre-listing paint refresh?',
+    a: 'A complete interior or exterior repaint scoped specifically for homes going on the market. We have prepped listings across Hampton Roads — we know what buyers notice and what listing photos need. Scoped in 48 hours, on the wall in a week.'
   },
   {
-    q: 'What neighborhoods do you serve?',
-    a: "Newport News, Hampton, and Williamsburg are our primary service areas. We regularly work in Hidenwood, Riverside, Merry Point Estates, Hilton Village, North End, Fox Hill, Farmington, Olde Wythe, Kingsmill, Ford's Colony, and Governor's Land. Other locations by request."
+    q: 'Should I stain or paint my cabinets and trim?',
+    a: 'Depends on the wood and the goal. Stain changes the color while keeping the grain — but it can only go darker. Going lighter means paint. We do both and tell you honestly which fits your project. Read our staining guide on the blog for the full breakdown.'
+  },
+  {
+    q: 'What areas do you serve?',
+    a: 'All of Hampton Roads. On the Peninsula: Newport News, Hampton, York County, and Poquoson — including Kiln Creek, Port Warwick, Hidenwood, Riverside, Hilton Village, Fox Hill, Farmington, Olde Wythe, and Phoebus. On the Southside: Norfolk, Virginia Beach, Chesapeake, Portsmouth, and Suffolk. Commercial work throughout the Jefferson Ave, Oyster Point, and Mercury Blvd corridors.'
   },
   {
     q: 'Are you licensed and insured?',
-    a: 'Yes — fully licensed in Virginia and insured. Every job is backed by our 3-year no-peel, no-blister warranty and on-time guarantee.'
-  },
-  {
-    q: 'Do you offer military discounts?',
-    a: 'Our PCS Move-In Refresh package is priced specifically for military families — we bake the savings into the package pricing instead of stacking discounts. You get a clean fixed number that matches BAH-budget realities.'
-  },
-  {
-    q: 'What about cabinet refinishing?',
-    a: "We do it occasionally, but it's not our main focus. If cabinets are part of a bigger PCS or pre-listing job, we'll include them. For cabinet-only work, ask Alvy in the chat and we'll point you in the right direction."
-  },
-  {
-    q: '¿Hablan español?',
-    a: 'Sí. Jose y parte del equipo hablan español. Escríbenos en el chat — te respondemos en el idioma que prefieras.'
+    a: 'Yes — fully licensed in Virginia under Alvy Color Changes LLC (DBA Alvarez Painters) and insured. Every job is backed by our 3-year no-peel, no-blister warranty and on-time guarantee.'
   },
   {
     q: 'Do you offer free estimates?',
-    a: 'Yes — estimates are always free. No obligation, no hard sell.'
+    a: 'Always. No obligation, no hard sell. Commercial or residential — free estimate within 24 hours.'
+  },
+  {
+    q: '¿Hablan español?',
+    a: 'Sí. Jose habla español. Llámanos o escríbenos — te respondemos en el idioma que prefieras.'
   }
 ];
 
@@ -74,7 +74,7 @@ export default function FAQ() {
       <div className="container-page max-w-3xl">
         <span className="pill">FAQ</span>
         <h2 className="font-display text-3xl sm:text-5xl font-semibold mt-4 leading-tight">
-          Questions Peninsula homeowners actually ask.
+          Questions clients actually ask.
         </h2>
         <div className="mt-10 divide-y divide-ink/10 border-y border-ink/10">
           {faqs.map((f, i) => (
@@ -110,8 +110,8 @@ export default function FAQ() {
         </div>
         <p className="mt-10 text-center text-sm text-ink/60">
           Still have a question?{' '}
-          <a href="#chat" className="text-brand underline underline-offset-4 hover:text-brand-dark">
-            Ask Alvy in the chat above
+          <a href="#estimate" className="text-brand underline underline-offset-4 hover:text-brand-dark">
+            Request a free estimate
           </a>{' '}
           or call us at{' '}
           <a href="tel:+17577196269" className="text-brand underline underline-offset-4 hover:text-brand-dark">

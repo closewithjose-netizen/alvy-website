@@ -1,38 +1,39 @@
 const offers = [
   {
-    tag: 'Featured',
-    title: 'PCS Move-In Refresh — Military Families',
+    tag: 'Featured — Commercial',
+    title: 'Commercial Interior Painting',
     blurb:
-      "You just got orders. The house needs to be livable by your report date. We've moved a few of you in ourselves — fixed packages, 7-14 day turn, photo documentation. Built around your timeline, not ours.",
+      'Offices, restaurants, retail, medical and dental spaces. We spec the right product for the environment — antimicrobial coatings for medical, high-durability finishes for high traffic — and we work around your business hours so you never close for paint.',
     tiers: [
-      'Essentials — interior touch-up, neutral repaint of main rooms + bedrooms, 7-day turn',
-      'Full Refresh — full interior + exterior touch-up + trim, 10-day turn',
-      'Premium — full interior + full exterior, 14-day turn'
+      'Offices and professional spaces — scheduled around your team, zero disruption',
+      'Restaurants and retail — night and weekend work, open on time every morning',
+      'Medical and dental — spec-grade antimicrobial systems, documented product selection',
+      'Multi-location programs — one vendor, consistent results across every site'
     ]
   },
   {
-    tag: 'For Realtors & Sellers',
+    tag: 'For Sellers',
     title: 'Pre-Listing Paint Refresh',
     blurb:
-      "Days-on-market is real money. Neutral interior + exterior touch-up + trim, scoped in 48 hours, on the wall in a week. Jose is a licensed VA Realtor too — he knows what your listing photos need and what your buyers will look at twice."
+      "Days-on-market is real money. A complete repaint scoped for homes going on the market — we've prepped listings across Hampton Roads and we know what buyers notice and what listing photos reward. Scoped in 48 hours, on the wall in a week."
   },
   {
-    tag: 'For Property Managers',
-    title: 'Turnover Paint Program',
+    tag: 'Residential',
+    title: 'Full Interior Repaints',
     blurb:
-      'Fixed room-by-room pricing. 24-48 hour estimates. Photo before/after. Owner-friendly invoicing. Already trusted by ABBITT Realty. Try us on one unit — no long-term commitment.'
+      'Full homes only — every room, one continuous standard. One color strategy, real prep, clean lines. The kind of repaint that changes how the whole house feels and lives.'
   },
   {
-    tag: 'Commercial',
-    title: 'Commercial Interior & Exterior',
+    tag: 'Residential',
+    title: 'Full Exterior Repaints',
     blurb:
-      "Offices, retail spaces, common areas, restaurants — interior or exterior. We work around your hours so your business keeps moving. Coordinated crew, clean job sites, real timelines you can plan against."
+      'Complete exterior repaints built for Hampton Roads weather — salt air, storm exposure, and sun. Real prep before any paint goes on, and a 3-year no-peel, no-blister warranty behind it.'
   },
   {
     tag: 'Big Houses',
     title: 'Large Homes 3,000+ sq ft',
     blurb:
-      "Estate-scale homes need a crew, not a side hustle. We coordinate multiple painters across rooms or elevations so a 4,000+ sq ft repaint doesn't drag on for a month. Detailed scope, daily progress, finished on the date we promised."
+      "Estate-scale homes need coordination, not a side hustle. We put multiple painters on the job simultaneously so a 4,000 sq ft repaint doesn't drag on for a month. Detailed scope, daily progress, finished on the date we promised."
   }
 ];
 
@@ -41,13 +42,13 @@ export default function Offers() {
     <section id="offers" className="py-20 sm:py-28 border-t border-ink/5">
       <div className="container-page">
         <div className="max-w-2xl mb-12">
-          <span className="pill">What we build for</span>
+          <span className="pill">What we do</span>
           <h2 className="font-display text-3xl sm:text-5xl font-semibold mt-4 leading-tight">
-            Five jobs we do better than anyone else on the Peninsula.
+            Full projects. Commercial first. Done on schedule.
           </h2>
         </div>
 
-        {/* Featured PCS card */}
+        {/* Featured commercial card */}
         <article className="rounded-3xl bg-ink text-cream p-8 sm:p-10 mb-6 shadow-2xl shadow-ink/20 relative overflow-hidden">
           <div
             aria-hidden
@@ -59,7 +60,7 @@ export default function Offers() {
               <span className="rounded-full bg-brand text-white px-2.5 py-1">
                 {offers[0].tag}
               </span>
-              <span className="opacity-60">Most-requested package</span>
+              <span className="opacity-60">Our primary focus</span>
             </div>
             <h3 className="font-display text-2xl sm:text-3xl font-semibold leading-snug">
               {offers[0].title}
@@ -76,13 +77,13 @@ export default function Offers() {
               ))}
             </ul>
             <p className="mt-6 text-xs text-cream/60">
-              Inspection-grade prep. Documented. Bilingual crew. Free estimate within 24 hours.
+              Spec-level product expertise. Owner-supervised. Bilingual. Free estimate within 24 hours.
             </p>
             <a
-              href="#chat"
+              href="#estimate"
               className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-brand hover:text-white transition-colors"
             >
-              Start a chat — Jose answers personally →
+              Get a free commercial estimate — Jose answers personally →
             </a>
           </div>
         </article>
@@ -108,11 +109,11 @@ export default function Offers() {
         </div>
 
         <p className="mt-10 text-center text-sm text-ink/60">
-          Also doing: deck staining, color consultations, drywall repair, and the occasional
-          cabinet refinish. Every job starts with a{' '}
-          <strong className="text-ink">free estimate</strong> — usually within 24 hours.{' '}
-          <a href="#chat" className="text-brand underline underline-offset-4 hover:text-brand-dark">
-            Start a chat
+          Full projects only — no accent walls, single rooms, or touch-ups. Every
+          job starts with a <strong className="text-ink">free estimate</strong> —
+          usually within 24 hours.{' '}
+          <a href="#estimate" className="text-brand underline underline-offset-4 hover:text-brand-dark">
+            Request yours
           </a>{' '}
           and Jose follows up personally.
         </p>

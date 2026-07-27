@@ -2,7 +2,7 @@ const areas = [
   {
     city: 'Newport News',
     blurb:
-      "We paint homes across Hidenwood, Riverside, Merry Point Estates, Hilton Village, North End / Huntington Heights, Denbigh, Port Warwick, Kiln Creek, and the rest of the 23606 corridor. Mid-century ranches, historic shipyard housing, waterfront colonials — we've worked on all of them. If you're near Newport News Shipbuilding or Joint Base Langley-Eustis, you're in our daily lane.",
+      "Home base. We paint across Hidenwood, Riverside, Merry Point Estates, Hilton Village, North End / Huntington Heights, Denbigh, Port Warwick, and Kiln Creek — plus the commercial corridors on Jefferson Ave, Warwick Blvd, and the Oyster Point business district.",
     neighborhoods: [
       'Hidenwood',
       'Riverside',
@@ -11,24 +11,35 @@ const areas = [
       'North End / Huntington Heights',
       'Denbigh',
       'Port Warwick',
-      'Kiln Creek'
+      'Kiln Creek',
+      'Oyster Point'
     ]
   },
   {
-    city: 'Hampton',
+    city: 'Hampton · York · Poquoson',
     blurb:
-      "We paint homes in Fox Hill, Farmington, Olde Wythe, Wythe, Phoebus, Riverdale, and the older waterfront pockets where Hampton's character lives. Storm-exposed trim, salt-air siding, and the kind of mid-century homes that need real prep — we know how those age.",
-    neighborhoods: ['Fox Hill', 'Farmington', 'Olde Wythe', 'Wythe', 'Phoebus', 'Riverdale']
+      "Fox Hill, Farmington, Olde Wythe, Wythe, Phoebus, Riverdale, and the waterfront pockets where Hampton's character lives — plus York County and Poquoson. Storm-exposed trim, salt-air siding, and commercial work along Mercury Blvd and Coliseum Drive.",
+    neighborhoods: [
+      'Fox Hill',
+      'Farmington',
+      'Olde Wythe',
+      'Wythe',
+      'Phoebus',
+      'Riverdale',
+      'York County',
+      'Poquoson'
+    ]
   },
   {
-    city: 'Williamsburg',
+    city: 'Southside — Norfolk to Suffolk',
     blurb:
-      "Historic and high-end homes in Kingsmill, Ford's Colony, Governor's Land, Powhatan Secondary, and the colonial-adjacent neighborhoods where craftsmanship still matters. HOA color approvals, brick-and-trim detailing, retiree-owned homes — we handle the conversations and the work.",
+      'We crossed the water in 2026 and the calendar filled fast. Full repaints and commercial interiors in Norfolk, Virginia Beach, Chesapeake, Portsmouth, and Suffolk — including recent full-home color transformations in Norfolk. Same standard, same on-time guarantee, both sides of the bridge.',
     neighborhoods: [
-      'Kingsmill',
-      "Ford's Colony",
-      "Governor's Land",
-      'Powhatan Secondary'
+      'Norfolk',
+      'Virginia Beach',
+      'Chesapeake',
+      'Portsmouth',
+      'Suffolk'
     ]
   }
 ];
@@ -42,7 +53,7 @@ export default function Neighborhoods() {
       <div className="container-page">
         <span className="pill">Where we work</span>
         <h2 className="font-display text-3xl sm:text-5xl font-semibold mt-4 max-w-3xl leading-tight">
-          Newport News, Hampton & Williamsburg.
+          All of Hampton Roads. Both sides of the water.
         </h2>
         <div className="grid lg:grid-cols-3 gap-6 mt-12">
           {areas.map((a) => (

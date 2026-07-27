@@ -2,31 +2,32 @@ const pillars = [
   {
     title: 'Owner-operated.',
     body:
-      "When you text Alvy, you're texting Jose. Not a call center in Texas. Not a franchise sales rep."
+      "When you contact Alvarez Painters, you're talking to Jose. Not a call center. Not a franchise sales rep. The owner scopes your job and supervises it."
   },
   {
-    title: 'Licensed VA Realtor.',
+    title: 'Spec-level product expertise.',
     body:
-      "Jose knows how listings work, what an HOA approval letter actually says, and how military move clocks tick."
+      'We know what product belongs where and why. Antimicrobial systems for medical spaces, commercial-grade coatings for high-traffic doors, the right primer for salt-air exteriors. We spec correctly before we ever pick up a brush.'
   },
   {
-    title: 'Bilingual — English & Spanish.',
-    body: 'Important in a base community. ¿Hablamos español? Claro que sí.'
-  },
-  {
-    title: 'Crew built for big jobs.',
+    title: 'Coordinated professional crew.',
     body:
-      "We're not a one-person operation. We can put multiple painters on a 3,000+ sq ft house or a commercial space and still keep your job clean."
+      'A coordinated crew scaled to your job, owner-supervised from scope to final walkthrough. Multiple painters on big jobs so timelines hold.'
+  },
+  {
+    title: 'Latino-owned · Bilingual · LGBTQ+ friendly.',
+    body:
+      'English and Spanish, on the phone and on the job. Every client treated with the same professionalism and respect. ¿Hablamos español? Claro que sí.'
   },
   {
     title: '3-year warranty.',
     body:
-      "No-peel, no-blister guarantee on every job. If the finish fails on us, we come back."
+      'No-peel, no-blister guarantee on every job. If the finish fails on us, we come back.'
   },
   {
     title: 'On-time guarantee.',
     body:
-      "We finish when we said we would, or you get an account credit. Your time matters."
+      'We finish when we said we would, or you get an account credit. Your time matters.'
   }
 ];
 
