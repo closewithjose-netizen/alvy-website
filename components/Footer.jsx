@@ -18,10 +18,11 @@ export default function Footer() {
         <div className="grid sm:grid-cols-3 gap-10">
           <div className="sm:col-span-2">
             <div className="font-display text-2xl font-semibold">
-              Alvy <span className="text-brand">Color Changes</span>
+              Alvarez <span className="text-brand">Painters</span>
             </div>
             <p className="text-cream/60 mt-2 text-sm">
-              Owner-operated house painters serving the Peninsula.
+              Owner-operated commercial and residential painters serving
+              Hampton Roads.
             </p>
             <address className="not-italic mt-6 text-sm text-cream/80 space-y-1">
               <div>Newport News, Virginia</div>
@@ -35,10 +36,10 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="mailto:jose@alvycolorchanges.com"
+                  href="mailto:jose@alvarezpainters.com"
                   className="hover:text-brand"
                 >
-                  jose@alvycolorchanges.com
+                  jose@alvarezpainters.com
                 </a>
               </div>
             </address>
@@ -57,6 +58,7 @@ export default function Footer() {
               <li><a href="#reviews" className="hover:text-brand">Reviews</a></li>
               <li><a href="#neighborhoods" className="hover:text-brand">Neighborhoods</a></li>
               <li><a href="#faq" className="hover:text-brand">FAQ</a></li>
+              <li><a href="/blog" className="hover:text-brand">Blog</a></li>
             </ul>
           </div>
         </div>

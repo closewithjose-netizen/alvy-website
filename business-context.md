@@ -228,7 +228,21 @@ Sí. Jose y parte del equipo hablan español. Escríbenos en el chat — te resp
 
 ---
 
-## 14. Recent updates
+## 14. Blog
+
+The site has a blog at `/blog` (index at `app/blog/page.jsx`, posts defined in `lib/posts.js`, rendered by `app/blog/[slug]/page.jsx`). Purpose: local SEO and content that mirrors what Jose posts on Instagram and TikTok (@alvarezpainters). Do not remove the blog routes. New posts are added as entries in `lib/posts.js`.
+
+Current posts:
+- `light-paint-colors-make-small-rooms-feel-bigger` — how one lighter color makes a small home feel bigger, based on a real Norfolk kitchen repaint (matches the Instagram reel from July 2026).
+- `staining-wood-color-change-without-losing-the-grain` — staining vs painting wood, gel stain color changes, the honey oak problem.
+
+Blog voice follows section 7. English body with a short "En español" summary block at the end of each post. Every post ends with a free-estimate CTA. Never quote prices in posts. Posts must not invite small jobs (no accent-wall or single-room content).
+
+---
+
+## 15. Recent updates
+
+- 2026-07-27: Added blog at /blog with first two posts (light colors make small homes feel bigger; staining vs painting). Added sitemap.xml and robots.txt via Next.js app routes. Fixed footer NAP: brand now Alvarez Painters, email now jose@alvarezpainters.com. Added Blog to header nav and footer.
 
 - 2026-05-26: Full rebrand to Alvarez Painters. Virginia SCC DBA registered — Filing No. 26052610046534. DPOR name change form A406-NAMECHG submitted with SCC certificate.
 - 2026-05-26: Repositioned as commercial-first operation. Commercial interior now featured primary service. PCS/military and rental turnover removed as primary offers.

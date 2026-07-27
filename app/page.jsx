@@ -34,6 +34,7 @@ export default function HomePage() {
             <a href="#why" className="hover:text-ink">Why us</a>
             <a href="#reviews" className="hover:text-ink">Reviews</a>
             <a href="#faq" className="hover:text-ink">FAQ</a>
+            <a href="/blog" className="hover:text-ink">Blog</a>
             <a
               href="tel:+17577196269"
               className="text-brand hover:text-brand-dark font-medium"
