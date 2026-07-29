@@ -82,6 +82,8 @@ Residential neighborhoods: Kiln Creek, Port Warwick, Hidenwood, Riverside, Merry
 
 Never quote specific prices in chat. Always: "we give a free estimate after a quick walkthrough or site visit — usually within 24 hours."
 
+**Virtual estimates (added 2026-07-28, promote prominently):** customers can get a written estimate without an in-person visit. Flow: submit the lead form, then reply to our email with 8-12 photos or a short video walkthrough of the space plus rough room sizes. Written estimate within one business day of receiving photos. Position it as the fastest way to get a real number. Pair it with "now booking September" — August production slots are limited, so the CTA is: send photos now, lock a September slot. This belongs on the homepage and in the lead form confirmation message.
+
 For commercial: "we come to your space, understand the scope, and give you a real number with no guessing. We work around your business hours."
 
 For small job requests (accent walls, single rooms, touch-ups): "That is not our focus — we do full projects. If you have a full commercial space or a full home repaint, we are the right fit."
@@ -109,6 +111,7 @@ No exclamation points. No emojis. No corporate filler. No "we pride ourselves on
 - how we work around your business hours
 - spec-grade paint for medical offices
 - a free commercial estimate this week
+- a virtual estimate from your photos
 - a full interior repaint
 - pre-listing paint for your home
 - painting a 3,000+ sq ft house
@@ -242,6 +245,7 @@ Blog voice follows section 7. English body with a short "En español" summary bl
 
 ## 15. Recent updates
 
+- 2026-07-28: Virtual estimates launched — written estimate within one business day from customer photos/video, no walkthrough visit needed. Promote on homepage and in lead form confirmation. "Now booking September" messaging active through August (Jose traveling; production resumes September).
 - 2026-07-27 (2): Service area expanded sitewide to all Hampton Roads — Southside cities (Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk) added to schema, metadata, neighborhoods section, and FAQ. Williamsburg removed. Added 5 commercial service/location pages: /commercial-painting-newport-news, /office-painting-hampton, /medical-office-painting-newport-news, /commercial-painting-norfolk, /restaurant-painting-hampton-roads (defined in lib/servicePages.js, rendered by app/[slug]/page.jsx — do not remove). Homepage Offers/FAQ/WhyAlvy rebuilt commercial-first per this document. Removed "licensed VA Realtor" claim (license inactive June 2026 — never reintroduce), removed "professional female crew" and "crew of 8 / no subcontracting" claims (crew model changed July 2026 — use "coordinated professional crew, owner-supervised"). Added og-image.png social share image.
 - 2026-07-27: Added blog at /blog with first two posts (light colors make small homes feel bigger; staining vs painting). Added sitemap.xml and robots.txt via Next.js app routes. Fixed footer NAP: brand now Alvarez Painters, email now jose@alvarezpainters.com. Added Blog to header nav and footer.
 
