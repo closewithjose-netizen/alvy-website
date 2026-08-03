@@ -1,18 +1,18 @@
 const pillars = [
   {
-    headline: 'Color is the actual product.',
+    headline: 'Spec-level product expertise.',
     body:
-      'Most painters hand you a fan deck and shrug. We walk the rooms with you, talk about light direction, put real samples on your wall, and you decide with confidence.'
+      'Jose knows which product belongs in which environment and why. A medical office gets antimicrobial paint. A high-traffic door gets a commercial-grade coating. We spec correctly before we ever quote — not after.'
   },
   {
-    headline: 'We show up when we say we will.',
+    headline: 'Coordinated professional crew, owner-supervised.',
     body:
-      "Estimate in 24 hours. Start dates honored. Finish dates honored. If we say Tuesday, we're knocking on the door Tuesday."
+      'Every job is supervised by Jose from scope to final walkthrough. Multiple painters on big jobs so timelines hold. When you contact Alvarez Painters, you are talking to Jose — not a call center, not a franchise rep.'
   },
   {
-    headline: 'Clean enough to invite the in-laws over mid-job.',
+    headline: 'A guarantee you can actually hold us to.',
     body:
-      'Drop cloths every day. Daily clean-up. No paint on the lawn, no roller covers in the bushes. You can keep living in the house while we work.'
+      '3-year no-peel, no-blister warranty on every job. On-time guarantee — we finish when we said, or you get an account credit. Free estimate within 24 hours, always.'
   }
 ];
 
@@ -22,7 +22,7 @@ export default function WhyUs() {
       <div className="container-page">
         <span className="pill bg-cream/10 text-cream">Why us</span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4 max-w-3xl">
-          Three reasons you'll never call another painter.
+          Three reasons clients do not call anyone else.
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {pillars.map((p, i) => (

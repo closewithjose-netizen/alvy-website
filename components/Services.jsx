@@ -1,39 +1,39 @@
 const services = [
   {
-    title: 'Interior painting',
+    title: 'Commercial interior painting',
     blurb:
-      'Walls, trim, ceilings, accent walls. Sharp lines, no roller marks, clean job sites.',
-    icon: '🛋'
+      'Offices, restaurants, retail, medical spaces, multi-location programs. We coordinate around your business hours so operations keep moving.',
+    icon: '🏢'
   },
   {
-    title: 'Exterior painting',
+    title: 'Pre-listing paint refresh',
     blurb:
-      'Siding, doors, fences, stucco refresh. Prep that actually lasts through a winter.',
+      'We know what buyers notice and what listing photos need. Scoped in 48 hours, on the wall in a week.',
     icon: '🏡'
   },
   {
-    title: 'Cabinet refinishing',
+    title: 'Full interior repaints',
     blurb:
-      'Sprayed, smooth, factory-finish kitchens and baths. New look without new boxes.',
-    icon: '🪵'
+      'Full homes only — no single rooms. A coordinated crew, owner-supervised from scope to final walkthrough.',
+    icon: '🛋'
   },
   {
-    title: 'Color consultations',
+    title: 'Full exterior repaints',
     blurb:
-      'Samples on your wall, written palette, 45 minutes. $150, credited if we get the job.',
+      'Complete exterior repaints for homes and commercial buildings. Prep that actually lasts.',
     icon: '🎨'
   },
   {
-    title: 'Unit turns',
+    title: 'Large homes 3,000+ sq ft',
     blurb:
-      'Property managers — fast, repeatable, paint+patch turnover work between tenants.',
-    icon: '🔑'
+      'Multiple painters on the job simultaneously. A 4,000 sq ft repaint does not drag on for a month.',
+    icon: '📐'
   },
   {
-    title: 'Wallpaper + repairs',
+    title: 'Multi-location programs',
     blurb:
-      'Removal, drywall repair, texture matching. The annoying stuff before the fun part.',
-    icon: '🩹'
+      'One relationship, one vendor, consistent results across all your sites. Built for franchise owners, restaurant groups, and retail chains.',
+    icon: '🗺️'
   }
 ];
 
@@ -44,7 +44,7 @@ export default function Services() {
         <div className="max-w-2xl mb-12">
           <span className="pill">What we do</span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4">
-            We paint, finish, and help you stop second-guessing the color.
+            Full projects. Commercial and residential. Done right.
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
