@@ -1,39 +1,39 @@
 const services = [
   {
-    title: 'Interior painting',
+    title: 'Commercial interior painting',
     blurb:
-      'Walls, trim, ceilings, accent walls. Sharp lines, no roller marks, clean job sites.',
-    icon: '🛋'
+      'Offices, restaurants, retail spaces, medical offices, multi-location programs. We work around your business hours and spec the right product for the environment.',
+    icon: '🏢'
   },
   {
-    title: 'Exterior painting',
+    title: 'Pre-listing paint refresh',
     blurb:
-      'Siding, doors, fences, stucco refresh. Prep that actually lasts through a winter.',
-    icon: '🏡'
-  },
-  {
-    title: 'Cabinet refinishing',
-    blurb:
-      'Sprayed, smooth, factory-finish kitchens and baths. New look without new boxes.',
-    icon: '🪵'
-  },
-  {
-    title: 'Color consultations',
-    blurb:
-      'Samples on your wall, written palette, 45 minutes. $150, credited if we get the job.',
-    icon: '🎨'
-  },
-  {
-    title: 'Unit turns',
-    blurb:
-      'Property managers — fast, repeatable, paint+patch turnover work between tenants.',
+      'Complete interior or exterior repaint scoped for homes going on the market. We know what buyers notice and what listing photos need.',
     icon: '🔑'
   },
   {
-    title: 'Wallpaper + repairs',
+    title: 'Full interior repaints',
     blurb:
-      'Removal, drywall repair, texture matching. The annoying stuff before the fun part.',
-    icon: '🩹'
+      'Full homes only. Coordinated crew, owner-supervised from scope to final walkthrough. No single rooms, no accent walls.',
+    icon: '🛋'
+  },
+  {
+    title: 'Full exterior repaints',
+    blurb:
+      'Siding, doors, trim, and surface prep that lasts. Full homes only — we do the complete job or we are not the right fit.',
+    icon: '🏡'
+  },
+  {
+    title: 'Large homes 3,000+ sq ft',
+    blurb:
+      'Multiple painters on the job simultaneously so a big repaint finishes on schedule. Detailed scope, daily progress, done when we said.',
+    icon: '📐'
+  },
+  {
+    title: 'Commercial exterior painting',
+    blurb:
+      'Storefronts, building facades, and multi-unit exteriors. Spec-grade coatings matched to the substrate and the environment.',
+    icon: '🏗️'
   }
 ];
 
@@ -44,8 +44,11 @@ export default function Services() {
         <div className="max-w-2xl mb-12">
           <span className="pill">What we do</span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4">
-            We paint, finish, and help you stop second-guessing the color.
+            Full projects. Commercial and residential. Done right.
           </h2>
+          <p className="mt-4 text-ink/60 text-sm leading-relaxed">
+            We are a full-project operation — not single rooms, accent walls, or patch jobs. Commercial interior is our primary focus. Full home repaints are our residential lane.
+          </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((s) => (
