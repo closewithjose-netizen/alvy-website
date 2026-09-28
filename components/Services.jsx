@@ -1,39 +1,39 @@
 const services = [
   {
-    title: 'Interior painting',
+    title: 'Commercial Interior Painting',
     blurb:
-      'Walls, trim, ceilings, accent walls. Sharp lines, no roller marks, clean job sites.',
-    icon: '🛋'
+      'Offices, restaurants, retail, medical spaces, multi-location programs. We work around your business hours and coordinate the crew so the job finishes on schedule.',
+    icon: '🏢'
   },
   {
-    title: 'Exterior painting',
+    title: 'Pre-Listing Paint Refresh',
     blurb:
-      'Siding, doors, fences, stucco refresh. Prep that actually lasts through a winter.',
-    icon: '🏡'
-  },
-  {
-    title: 'Cabinet refinishing',
-    blurb:
-      'Sprayed, smooth, factory-finish kitchens and baths. New look without new boxes.',
-    icon: '🪵'
-  },
-  {
-    title: 'Color consultations',
-    blurb:
-      'Samples on your wall, written palette, 45 minutes. $150, credited if we get the job.',
-    icon: '🎨'
-  },
-  {
-    title: 'Unit turns',
-    blurb:
-      'Property managers — fast, repeatable, paint+patch turnover work between tenants.',
+      'We know what buyers notice and what listing photos need. Scoped in 48 hours, on the wall in a week.',
     icon: '🔑'
   },
   {
-    title: 'Wallpaper + repairs',
+    title: 'Full Interior Repaints',
     blurb:
-      'Removal, drywall repair, texture matching. The annoying stuff before the fun part.',
-    icon: '🩹'
+      'Full homes only — no single rooms, no accent walls. A coordinated crew that moves through your home without dragging it out for weeks.',
+    icon: '🛋'
+  },
+  {
+    title: 'Full Exterior Repaints',
+    blurb:
+      'Siding, trim, doors, stucco. Prep that actually holds through a Virginia summer and a mid-Atlantic winter.',
+    icon: '🏡'
+  },
+  {
+    title: 'Large Homes 3,000+ sq ft',
+    blurb:
+      'Multiple painters on the job at once. A 4,000 sq ft repaint should not take a month. Ours does not.',
+    icon: '📐'
+  },
+  {
+    title: 'Commercial Exterior Painting',
+    blurb:
+      'Storefronts, building facades, parking structures. Correct surface prep and spec-grade coatings that last.',
+    icon: '🏗'
   }
 ];
 
@@ -44,7 +44,7 @@ export default function Services() {
         <div className="max-w-2xl mb-12">
           <span className="pill">What we do</span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4">
-            We paint, finish, and help you stop second-guessing the color.
+            Full projects only — commercial and residential, done right.
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
