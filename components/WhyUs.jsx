@@ -1,18 +1,33 @@
 const pillars = [
   {
-    headline: 'Color is the actual product.',
+    headline: 'Spec-level product expertise.',
     body:
-      'Most painters hand you a fan deck and shrug. We walk the rooms with you, talk about light direction, put real samples on your wall, and you decide with confidence.'
+      'Jose knows which product belongs in which environment and why. Medical-grade antimicrobial for healthcare spaces. Commercial-grade door coatings for high-traffic entries. We spec correctly before we ever pick up a brush — not after.'
   },
   {
-    headline: 'We show up when we say we will.',
+    headline: 'Coordinated crew, owner on every job.',
     body:
-      "Estimate in 24 hours. Start dates honored. Finish dates honored. If we say Tuesday, we're knocking on the door Tuesday."
+      'Multiple painters on big jobs so timelines hold. Jose supervises from scope to final walkthrough. When you contact Alvarez Painters, you are talking to Jose — not a call center, not a franchise rep.'
   },
   {
-    headline: 'Clean enough to invite the in-laws over mid-job.',
+    headline: 'We finish when we said we would.',
     body:
-      'Drop cloths every day. Daily clean-up. No paint on the lawn, no roller covers in the bushes. You can keep living in the house while we work.'
+      'Estimate in 24 hours. Start dates honored. Finish dates honored. If we run over, you get an account credit. The on-time guarantee is in writing.'
+  },
+  {
+    headline: '3-year warranty on every job.',
+    body:
+      'No-peel, no-blister guarantee. If it fails in three years, we fix it. That is what spec-grade prep and the right product actually buys you.'
+  },
+  {
+    headline: 'Latino-owned. Bilingual. LGBTQ+ friendly.',
+    body:
+      'Jose Melendez Alvarez, Newport News based. Owner and crew are bilingual — English and Spanish. All clients treated with the same professionalism and respect, full stop.'
+  },
+  {
+    headline: '5.0 on Google. 25+ reviews.',
+    body:
+      'Not curated. Not from friends. From real commercial and residential clients across Hampton Roads. Licensed and insured in Virginia under Alvy Color Changes LLC.'
   }
 ];
 
@@ -22,9 +37,9 @@ export default function WhyUs() {
       <div className="container-page">
         <span className="pill bg-cream/10 text-cream">Why us</span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-4 max-w-3xl">
-          Three reasons you'll never call another painter.
+          Six things that actually matter when you are hiring a painting crew.
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {pillars.map((p, i) => (
             <div key={i}>
               <div className="font-display text-5xl text-brand mb-3">
