@@ -159,9 +159,9 @@ export default function LeadForm() {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto animate-fade-up">
-      <div className="text-center">
-        <h1 className="font-display text-6xl sm:text-7xl font-semibold tracking-tight leading-none">Free estimate.</h1>
+    <div className="w-full max-w-2xl mx-auto lg:mx-0 animate-fade-up">
+      <div className="text-center lg:text-left">
+        <h1 className="font-display text-5xl sm:text-7xl font-semibold tracking-tight leading-none">Free <span className="text-sage">estimate</span>.</h1>
         <p className="mt-5 text-lg sm:text-xl text-ink/70 leading-snug">
           Get a real number for{' '}
           <span className="relative inline-block">
@@ -176,7 +176,7 @@ export default function LeadForm() {
         </p>
       </div>
 
-      <form onSubmit={submit} className="mt-8 bg-white rounded-3xl shadow-xl shadow-brand/10 border border-ink/5 p-6 sm:p-8">
+      <form onSubmit={submit} className="mt-8 bg-white rounded-3xl shadow-xl shadow-ink/10 border border-ink/5 p-6 sm:p-8">
         <div className="flex items-center justify-center gap-1 mb-6 bg-ink/5 rounded-full p-1 w-full sm:w-auto sm:mx-auto sm:max-w-sm">
           {[{ id: 'commercial', label: 'Commercial' }, { id: 'residential', label: 'Residential' }].map((opt) => (
             <button
@@ -235,7 +235,7 @@ export default function LeadForm() {
           </select>
         </Field>
 
-        <button type="submit" disabled={submitting || !valid()} className="mt-6 w-full rounded-full bg-brand text-white font-medium text-base py-3.5 disabled:opacity-40 hover:bg-brand-dark transition-colors">
+        <button type="submit" disabled={submitting || !valid()} className="mt-6 w-full rounded-full bg-sage text-white font-medium text-base py-3.5 disabled:opacity-40 hover:bg-sage-dark transition-colors">
           {submitting ? 'Sending…' : 'Get my free estimate'}
         </button>
 

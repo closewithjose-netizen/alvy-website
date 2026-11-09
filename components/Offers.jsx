@@ -53,11 +53,11 @@ export default function Offers() {
           <div
             aria-hidden
             className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-30 blur-3xl"
-            style={{ background: 'radial-gradient(closest-side, rgba(232,84,43,0.6), transparent)' }}
+            style={{ background: 'radial-gradient(closest-side, rgba(180,204,176,0.35), transparent)' }}
           />
           <div className="relative">
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider mb-4">
-              <span className="rounded-full bg-brand text-white px-2.5 py-1">
+              <span className="rounded-full bg-sage text-white px-2.5 py-1">
                 {offers[0].tag}
               </span>
               <span className="opacity-60">Our primary focus</span>

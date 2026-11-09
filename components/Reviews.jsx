@@ -31,8 +31,8 @@ function Stars({ count }) {
           width="14"
           height="14"
           viewBox="0 0 24 24"
-          fill={i < count ? '#E8542B' : 'none'}
-          stroke="#E8542B"
+          fill={i < count ? '#567A5C' : 'none'}
+          stroke="#567A5C"
           strokeWidth="1.5"
           strokeLinejoin="round"
         >

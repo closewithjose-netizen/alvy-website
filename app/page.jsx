@@ -2,6 +2,7 @@
 
 import LeadForm from '../components/LeadForm';
 import TrustStrip from '../components/TrustStrip';
+import OurWork from '../components/OurWork';
 import Offers from '../components/Offers';
 import WhyAlvy from '../components/WhyAlvy';
 import Reviews from '../components/Reviews';
@@ -22,7 +23,7 @@ export default function HomePage() {
           className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full opacity-40 blur-3xl"
           style={{
             background:
-              'radial-gradient(closest-side, rgba(232,84,43,0.35), rgba(232,84,43,0))'
+              'radial-gradient(closest-side, rgba(86,122,92,0.18), rgba(86,122,92,0))'
           }}
         />
         <header className="relative z-10 px-6 py-5 flex items-center justify-between">
@@ -30,6 +31,7 @@ export default function HomePage() {
             Alvarez <span className="text-brand">Painters</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm text-ink/60">
+            <a href="#work" className="hover:text-ink">Our work</a>
             <a href="#offers" className="hover:text-ink">What we do</a>
             <a href="#why" className="hover:text-ink">Why us</a>
             <a href="#reviews" className="hover:text-ink">Reviews</a>
@@ -43,8 +45,34 @@ export default function HomePage() {
             </a>
           </nav>
         </header>
-        <div className="relative z-10 flex-1 flex items-center justify-center px-4 pb-10">
-          <LeadForm />
+        <div className="relative z-10 flex-1 flex items-center px-4 pb-10">
+          <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <LeadForm />
+            <div className="relative hidden lg:block">
+              <img
+                src="/work/staircase-white-oak.jpg"
+                alt="Staircase painted white with stained oak treads by Alvarez Painters"
+                className="w-full aspect-[4/5] object-cover rounded-[2rem] shadow-2xl shadow-ink/25"
+              />
+              <div className="absolute -left-8 bottom-10 bg-white rounded-2xl shadow-xl shadow-ink/15 px-5 py-4">
+                <div className="flex items-center gap-1 text-sage" aria-hidden>
+                  {'★★★★★'}
+                </div>
+                <div className="mt-1 text-sm font-semibold text-ink">5.0 on Google</div>
+                <div className="text-xs text-ink/50">25+ reviews · 3-year warranty</div>
+              </div>
+              <div className="absolute -top-4 -right-4 rounded-full bg-sage text-white text-xs uppercase tracking-wider px-4 py-2 shadow-lg">
+                Our work, not stock photos
+              </div>
+            </div>
+            <div className="lg:hidden -mx-4">
+              <img
+                src="/work/staircase-white-oak.jpg"
+                alt="Staircase painted white with stained oak treads by Alvarez Painters"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </div>
         </div>
         <div className="relative z-10 pb-6 flex flex-col items-center gap-3">
           <a
@@ -58,6 +86,7 @@ export default function HomePage() {
 
       {/* ─── DEEPER CONTENT ──────────────────────────────────── */}
       <TrustStrip />
+      <OurWork />
       <Offers />
       <WhyAlvy />
       <Reviews />

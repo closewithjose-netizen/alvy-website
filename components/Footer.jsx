@@ -12,7 +12,7 @@ export default function Footer() {
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-60 -right-40 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl"
-        style={{ background: 'radial-gradient(closest-side, #E8542B, transparent)' }}
+        style={{ background: 'radial-gradient(closest-side, #567A5C, transparent)' }}
       />
       <div className="container-page relative">
         <div className="grid sm:grid-cols-3 gap-10">

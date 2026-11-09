@@ -87,7 +87,7 @@ export default function FAQ() {
               <span
                 className={`mt-1 inline-block w-6 h-6 shrink-0 rounded-full border border-ink/20 grid place-items-center text-xs transition-transform ${
                   open === i
-                    ? 'rotate-45 bg-brand text-white border-brand'
+                    ? 'rotate-45 bg-sage text-white border-sage'
                     : 'group-hover:border-brand/50'
                 }`}
               >

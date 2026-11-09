@@ -7,12 +7,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: '#0F1115',
-        cream: '#FAF6EF',
+        ink: '#172A45',
+        cream: '#FAF7F1',
         brand: {
-          DEFAULT: '#E8542B', // warm Alvy orange — feels like fresh paint
-          dark: '#B73C18',
-          soft: '#FBE7DD'
+          DEFAULT: '#24518F', // trusted navy-blue for links and labels
+          dark: '#1A3C6B',
+          soft: '#E6ECF5',
+          light: '#9DBBE3'
+        },
+        sage: {
+          DEFAULT: '#567A5C', // the warm touch: buttons and highlights
+          dark: '#44624A',
+          soft: '#E7EEE4',
+          light: '#B4CCB0'
         },
         accent: {
           teal: '#1F8A8A',
