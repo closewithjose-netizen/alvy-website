@@ -238,6 +238,9 @@ The site has a blog at `/blog` (index at `app/blog/page.jsx`, posts defined in `
 Current posts:
 - `light-paint-colors-make-small-rooms-feel-bigger` — how one lighter color makes a small home feel bigger, based on a real Norfolk kitchen repaint (matches the Instagram reel from July 2026).
 - `staining-wood-color-change-without-losing-the-grain` — staining vs painting wood, gel stain color changes, the honey oak problem.
+- `commercial-painting-in-winter-hampton-roads` — why winter is the best window for interior commercial repaints; cold-weather paint limits; after-hours phasing.
+- `what-to-paint-before-selling-your-home` — pre-listing paint guide: what buyers notice, colors that photograph well, where sellers waste money.
+- `medical-office-painting-what-to-know` — medical/dental office painting: cleanable finishes, low-VOC, phased scheduling around patients.
 
 Blog voice follows section 7. English body with a short "En español" summary block at the end of each post. Every post ends with a free-estimate CTA. Never quote prices in posts. Posts must not invite small jobs (no accent-wall or single-room content).
 
@@ -245,6 +248,7 @@ Blog voice follows section 7. English body with a short "En español" summary bl
 
 ## 15. Recent updates
 
+- 2026-11-08: Added three blog posts: winter commercial painting, pre-listing paint guide, medical office painting.
 - 2026-07-28: Virtual estimates launched — written estimate within one business day from customer photos/video, no walkthrough visit needed. Promote on homepage and in lead form confirmation. "Now booking September" messaging active through August (Jose traveling; production resumes September).
 - 2026-07-27 (2): Service area expanded sitewide to all Hampton Roads — Southside cities (Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk) added to schema, metadata, neighborhoods section, and FAQ. Williamsburg removed. Added 5 commercial service/location pages: /commercial-painting-newport-news, /office-painting-hampton, /medical-office-painting-newport-news, /commercial-painting-norfolk, /restaurant-painting-hampton-roads (defined in lib/servicePages.js, rendered by app/[slug]/page.jsx — do not remove). Homepage Offers/FAQ/WhyAlvy rebuilt commercial-first per this document. Removed "licensed VA Realtor" claim (license inactive June 2026 — never reintroduce), removed "professional female crew" and "crew of 8 / no subcontracting" claims (crew model changed July 2026 — use "coordinated professional crew, owner-supervised"). Added og-image.png social share image.
 - 2026-07-27: Added blog at /blog with first two posts (light colors make small homes feel bigger; staining vs painting). Added sitemap.xml and robots.txt via Next.js app routes. Fixed footer NAP: brand now Alvarez Painters, email now jose@alvarezpainters.com. Added Blog to header nav and footer.
