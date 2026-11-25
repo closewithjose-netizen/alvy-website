@@ -58,6 +58,7 @@ export default function Footer() {
               <li><a href="/#reviews" className="hover:text-brand">Reviews</a></li>
               <li><a href="/#faq" className="hover:text-brand">FAQ</a></li>
               <li><a href="/blog" className="hover:text-brand">Blog</a></li>
+              <li><a href="/colors" className="hover:text-brand">Hue Roads color report</a></li>
             </ul>
             <div className="text-xs uppercase tracking-wider text-cream/40 mb-3 mt-8">
               Commercial services

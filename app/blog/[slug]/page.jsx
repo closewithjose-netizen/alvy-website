@@ -58,6 +58,15 @@ function Block({ block }) {
       </ul>
     );
   }
+  if (block.type === 'link') {
+    return (
+      <p className="my-8">
+        <Link href={block.href} className="btn-primary">
+          {block.text}
+        </Link>
+      </p>
+    );
+  }
   if (block.type === 'es') {
     return (
       <p className="mt-10 rounded-2xl bg-white border border-ink/10 p-6 text-ink/80 leading-relaxed">
