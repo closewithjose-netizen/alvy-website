@@ -178,7 +178,7 @@ export default function ColorPage({ params }) {
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="tel:+17577196269" className="btn-primary">(757) 719-6269</a>
             {INSTAGRAM_URL ? (
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="btn-secondary">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="btn-ghost">
                 Follow Hue Roads on Instagram
               </a>
             ) : null}

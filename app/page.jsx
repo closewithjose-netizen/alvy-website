@@ -8,6 +8,8 @@ import WhyAlvy from '../components/WhyAlvy';
 import Reviews from '../components/Reviews';
 import Neighborhoods from '../components/Neighborhoods';
 import FAQ from '../components/FAQ';
+import FeaturedColor from '../components/FeaturedColor';
+import { colors } from '../lib/colors';
 import Footer from '../components/Footer';
 
 export default function HomePage() {
@@ -26,6 +28,15 @@ export default function HomePage() {
               'radial-gradient(closest-side, rgba(86,122,92,0.18), rgba(86,122,92,0))'
           }}
         />
+        {colors[0] ? (
+          <a
+            href={`/colors/${colors[0].slug}`}
+            className="relative z-20 block bg-ink text-cream text-center text-xs sm:text-sm px-4 py-2.5 hover:bg-brand-dark transition-colors"
+          >
+            <span className="uppercase tracking-[0.2em] text-cream/60 mr-2">New</span>
+            Hue Roads {colors[0].issue}: {colors[0].name} {colors[0].code}, the {colors[0].tag} <span aria-hidden>→</span>
+          </a>
+        ) : null}
         <header className="relative z-10 px-6 py-5 flex items-center justify-between">
           <div className="font-display text-lg font-semibold">
             Alvarez <span className="text-brand">Painters</span>
@@ -36,6 +47,7 @@ export default function HomePage() {
             <a href="#why" className="hover:text-ink">Why us</a>
             <a href="#reviews" className="hover:text-ink">Reviews</a>
             <a href="#faq" className="hover:text-ink">FAQ</a>
+            <a href="/colors" className="hover:text-ink">Hue Roads</a>
             <a href="/blog" className="hover:text-ink">Blog</a>
             <a
               href="tel:+17577196269"
@@ -86,6 +98,7 @@ export default function HomePage() {
 
       {/* ─── DEEPER CONTENT ──────────────────────────────────── */}
       <TrustStrip />
+      <FeaturedColor />
       <OurWork />
       <Offers />
       <WhyAlvy />
